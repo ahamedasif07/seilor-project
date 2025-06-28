@@ -1,0 +1,60 @@
+@keyframes outlineFill {
+  0% {
+    stroke-dashoffset: 600;
+    fill: white;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill: #2b2d42;
+  }
+  100% {
+    stroke-dashoffset: 600;
+    fill: white;
+  }
+}
+
+@keyframes outlineFillRed {
+  0% {
+    stroke-dashoffset: 100;
+    fill: white;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill: red; /* triangle fill becomes red here */
+  }
+  100% {
+    stroke-dashoffset: 100;
+    fill: white;
+  }
+}
+
+@keyframes slowBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.sailor-animate {
+  font-family: "Playfair Display", serif;
+  font-size: 80px;
+  stroke: #555;
+  stroke-width: 1.5px;
+  fill: white;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: outlineFill 6s ease-in-out infinite;
+  transition: fill 0.5s ease-in-out;
+}
+
+.triangle-animate {
+  stroke: red;
+  stroke-width: 2px;
+  fill: white;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: outlineFillRed 6s infinite, slowBounce 6s infinite;
+}
