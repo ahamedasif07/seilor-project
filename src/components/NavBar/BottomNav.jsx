@@ -5,6 +5,7 @@ import newAraivleDpImgTheree from "../../../public/images/project-sailor-home-pa
 import summweDpimgOne from "../../../public/images/project-sailor-home-page005.jpg";
 import summweDpimgTwo from "../../../public/images/project-sailor-home-page006.jpg";
 import summweDpimgTheree from "../../../public/images/project-sailor-home-page007.jpg";
+import Image from "next/image";
 
 const BottomNav = () => {
   return (
@@ -17,17 +18,25 @@ const BottomNav = () => {
             <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer">
               SUMMER COLLECTION/25
             </h3>
-
             {/* Dropdown */}
+
             <div
-              className={`absolute left-111 transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2  rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
+              className={`absolute left-105 transform -translate-x-1/2 z-[1000] px-[10px] border-2 border-red-600 w-[99vw] top-full py-2 rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
     duration-300 flex flex-col items-start 
     opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
             >
               <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
                 {/* Left image */}
-                <div className="max-w-[300px] w-full md:w-1/4 shrink-0">
-                  <img className="w-full" src={summweDpimgOne} alt="Left" />
+                <div className="w-full   md:w-1/4 shrink-0">
+                  <div className="relative w-2/3 h-[300px] lg:h-[400px]">
+                    <Image
+                      src={summweDpimgOne}
+                      alt="Left"
+                      layout="fill"
+                      objectFit="cover"
+                      priority
+                    />
+                  </div>
                 </div>
 
                 {/* Grid content */}
@@ -36,70 +45,36 @@ const BottomNav = () => {
                     <h4 className="font-semibold mb-2 text-left">
                       MEN SUMMER COMFORT
                     </h4>
-
-                    {/* <h4 className="font-semibold mb-2 text-left">PANJABI</h4>
-                    <ul className="space-y-1">
-                      <li className="text-left text-[12px]">CLASSIC</li>
-                      <li className="text-left text-[12px]">FUSION</li>
-                      <li className="text-left text-[12px]">KABLI SUIT</li>
-                    </ul>
-                   
-                    <h4 className="font-semibold my-2 text-left">SHIRT</h4>
-                    <ul className="space-y-1">
-                      <li className="text-left text-[12px]">
-                        BUSINESS FORMAL SHIRT
-                      </li>
-                      <li className="text-left text-[12px]">
-                        EXECUTIVE FORMAL SHIRT
-                      </li>
-                      <li className="text-left text-[12px]">
-                        FASHION EXPRESS SHIRT
-                      </li>
-                      <li className="text-left text-[12px]">
-                        KNIT DRESS SHIRT
-                      </li>
-                      <li className="text-left text-[12px]">
-                        SMART CASUAL SHIRT
-                      </li>
-                      <li className="text-left text-[12px]">CASUAL SHIRT</li>
-                      <li className="text-left text-[12px]">
-                        CASUAL SHIRT (H/S)
-                      </li>
-                      <li className="text-left text-[12px]">
-                        KNIT CASUAL SHIRT (H/S)
-                      </li>
-                    </ul>
-                   
-                    <h4 className="font-semibold mb-2 text-left">POLOS</h4>
-                    <ul className="space-y-1">
-                      <li className="text-left text-[12px]">KNIT BASIC POLO</li>
-                      <li className="text-left text-[12px]">
-                        KNIT FASHION POLO
-                      </li>
-
-                      <li className="text-left text-[12px]">KABLI SUIT</li>
-                    </ul> */}
+                    {/* ... */}
                   </div>
                   <div>
                     <h4 className="font-semibold mb-2 text-left">
-                      WOMENNSUMMER COMFORT
+                      WOMEN SUMMER COMFORT
                     </h4>
-                    {/* <ul className="space-y-1">
-                      <li className="text-left text-[12px]">KURTI</li>
-                      <li className="text-left text-[12px]">LONG KURTI</li>
-                      <li className="text-left text-[12px]">SALWAR SUIT</li>
-                      <li className="text-left text-[12px]">GOWN</li>
-                      <li className="text-left text-[12px]">2 PCE</li>
-                      <li className="text-left text-[12px]">LONG TOP</li>
-                      <li className="text-left text-[12px]">SHORT TOP</li>
-                    </ul> */}
+                    {/* ... */}
                   </div>
                 </div>
 
-                {/* Right image */}
+                {/* Right images */}
                 <div className="w-full md:w-1/4 flex gap-3 shrink-0">
-                  <img className="w-1/2" src={summweDpimgTwo} alt="Right" />
-                  <img className="w-1/2" src={summweDpimgTheree} alt="Right" />
+                  <div className="relative w-1/2 h-[200px] lg:h-[300px]">
+                    <Image
+                      src={summweDpimgTwo}
+                      alt="Right 1"
+                      layout="fill"
+                      objectFit="cover"
+                      priority
+                    />
+                  </div>
+                  <div className="relative w-1/2 h-[200px]  lg:h-[300px]">
+                    <Image
+                      src={summweDpimgTheree}
+                      alt="Right 2"
+                      layout="fill"
+                      objectFit="cover"
+                      priority
+                    />
+                  </div>
                 </div>
               </div>
             </div>
