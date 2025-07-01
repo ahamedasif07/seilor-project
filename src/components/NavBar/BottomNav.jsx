@@ -21,7 +21,7 @@ const BottomNav = () => {
             {/* Dropdown */}
 
             <div
-              className={`absolute left-105 transform -translate-x-1/2 z-[1000] px-[10px] border-2 border-red-600 w-[99vw] top-full py-2 rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
+              className={`absolute left-105 transform -translate-x-1/2 z-[1000] px-[10px]  w-[99vw] top-full py-2 rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
     duration-300 flex flex-col items-start 
     opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
             >
@@ -90,18 +90,22 @@ const BottomNav = () => {
 
               {/* Dropdown */}
               <div
-                className={`absolute left-57 transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2  rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
+                className={`absolute left-55  transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2  rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
     duration-300 flex flex-col items-start 
     opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
               >
                 <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
                   {/* Left image */}
-                  <div className="max-w-[300px] w-full md:w-1/4 shrink-0">
-                    <img
-                      className="w-full"
-                      src={newAraivleDpImgOne}
-                      alt="Left"
-                    />
+                  <div className="w-full   md:w-1/4 shrink-0">
+                    <div className="relative w-2/3 h-[300px] lg:h-[400px]">
+                      <Image
+                        src={newAraivleDpImgOne}
+                        alt="Left"
+                        layout="fill"
+                        objectFit="cover"
+                        priority
+                      />
+                    </div>
                   </div>
 
                   {/* Grid content */}
@@ -205,16 +209,24 @@ const BottomNav = () => {
 
                   {/* Right image */}
                   <div className="w-full md:w-1/4 flex gap-3 shrink-0">
-                    <img
-                      className="w-1/2"
-                      src={newAraivleDpImgTow}
-                      alt="Right"
-                    />
-                    <img
-                      className="w-1/2"
-                      src={newAraivleDpImgTheree}
-                      alt="Right"
-                    />
+                    <div className="relative w-1/2 h-[200px] lg:h-[300px]">
+                      <Image
+                        src={newAraivleDpImgTow}
+                        alt="Right 1"
+                        layout="fill"
+                        objectFit="cover"
+                        priority
+                      />
+                    </div>
+                    <div className="relative w-1/2 h-[200px]  lg:h-[300px]">
+                      <Image
+                        src={newAraivleDpImgTheree}
+                        alt="Right 2"
+                        layout="fill"
+                        objectFit="cover"
+                        priority
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
