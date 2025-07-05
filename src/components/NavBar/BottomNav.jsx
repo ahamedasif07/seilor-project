@@ -8,6 +8,12 @@ import summweDpimgTheree from "../../../public/images/project-sailor-home-page00
 import menDpImgOne from "../../../public/images/project-sailor-home-page011.jpg";
 import menDpImgTwo from "../../../public/images/project-sailor-home-page012.jpg";
 import menDpImgTheree from "../../../public/images/project-sailor-home-page013.jpg";
+import womenDpImgOne from "../../../public/images/project-sailor-home-page014.jpg";
+import womenDpImgTwo from "../../../public/images/project-sailor-home-page015.jpg";
+import womenDpImgTheree from "../../../public/images/project-sailor-home-page016.jpg";
+import kisDpImgOne from "../../../public/images/project-sailor-home-page017.jpg";
+import kidDpImgTwo from "../../../public/images/project-sailor-home-page018.jpg";
+import kidDpImgTheree from "../../../public/images/project-sailor-home-page019.jpg";
 import Image from "next/image";
 
 const BottomNav = () => {
@@ -24,7 +30,7 @@ const BottomNav = () => {
             {/* Dropdown */}
 
             <div
-              className={`absolute left-105 transform -translate-x-1/2 z-[1000] px-[10px]  w-[99vw] top-full py-2 rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
+              className={`absolute left-108 transform -translate-x-1/2 z-[1000] px-[10px]  w-[99vw] top-full py-2 rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
     duration-300 flex flex-col items-start 
     opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
             >
@@ -95,7 +101,7 @@ const BottomNav = () => {
 
               {/* Dropdown */}
               <div
-                className={`absolute left-55  transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2  rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
+                className={`absolute left-58  transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2  rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
     duration-300 flex flex-col items-start 
     opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
               >
@@ -250,7 +256,7 @@ const BottomNav = () => {
 
               {/* Dropdown */}
               <div
-                className={`absolute left-20  transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2  rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
+                className={`absolute left-22  transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2  rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
     duration-300 flex flex-col items-start 
     opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
               >
@@ -392,7 +398,7 @@ const BottomNav = () => {
                   <div className="w-full   md:w-1/4 shrink-0">
                     <div className="relative w-2/3 h-[300px] lg:h-[400px]">
                       <Image
-                        src={menDpImgOne}
+                        src={womenDpImgOne}
                         alt="Left"
                         layout="fill"
                         objectFit="cover"
@@ -434,7 +440,7 @@ const BottomNav = () => {
                   <div className="w-full md:w-1/4 flex gap-3 shrink-0">
                     <div className="relative w-1/2 h-[200px] lg:h-[300px]">
                       <Image
-                        src={menDpImgTwo}
+                        src={womenDpImgTwo}
                         alt="Right 1"
                         layout="fill"
                         objectFit="cover"
@@ -443,7 +449,7 @@ const BottomNav = () => {
                     </div>
                     <div className="relative w-1/2 h-[200px]  lg:h-[300px]">
                       <Image
-                        src={menDpImgTheree}
+                        src={womenDpImgTheree}
                         alt="Right 2"
                         layout="fill"
                         objectFit="cover"
@@ -468,7 +474,7 @@ const BottomNav = () => {
 
               {/* Dropdown */}
               <div
-                className={`absolute left-[-30]  transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2  rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
+                className={`absolute -left-19  transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2  rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
     duration-300 flex flex-col items-start 
     opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
               >
@@ -477,7 +483,7 @@ const BottomNav = () => {
                   <div className="w-full   md:w-1/4 shrink-0">
                     <div className="relative w-2/3 h-[300px] lg:h-[400px]">
                       <Image
-                        src={menDpImgOne}
+                        src={kisDpImgOne}
                         alt="Left"
                         layout="fill"
                         objectFit="cover"
@@ -559,7 +565,7 @@ const BottomNav = () => {
                   <div className="w-full md:w-1/4 flex gap-3 shrink-0">
                     <div className="relative w-1/2 h-[200px] lg:h-[300px]">
                       <Image
-                        src={menDpImgTwo}
+                        src={kidDpImgTwo}
                         alt="Right 1"
                         layout="fill"
                         objectFit="cover"
@@ -568,7 +574,7 @@ const BottomNav = () => {
                     </div>
                     <div className="relative w-1/2 h-[200px]  lg:h-[300px]">
                       <Image
-                        src={menDpImgTheree}
+                        src={kidDpImgTheree}
                         alt="Right 2"
                         layout="fill"
                         objectFit="cover"
