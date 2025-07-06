@@ -14,6 +14,10 @@ import womenDpImgTheree from "../../../public/images/project-sailor-home-page016
 import kisDpImgOne from "../../../public/images/project-sailor-home-page017.jpg";
 import kidDpImgTwo from "../../../public/images/project-sailor-home-page018.jpg";
 import kidDpImgTheree from "../../../public/images/project-sailor-home-page019.jpg";
+import newbronDpImgOne from "../../../public/images/project-sailor-home-page020.jpg";
+import newbronDpImgTwo from "../../../public/images/project-sailor-home-page021.jpg";
+import newbronDpImgTheree from "../../../public/images/project-sailor-home-page022.jpg";
+
 import Image from "next/image";
 
 const BottomNav = () => {
@@ -587,7 +591,120 @@ const BottomNav = () => {
             </div>
           </div>
           {/* kids dropdowen end */}
-          <h3 className="text-[15px] font-semibold text-gray-700">NEWBORN</h3>
+
+          {/* newborn dropwen start */}
+          <div className="relative group   text-center cursor-pointer transition-all duration-200  border-orange-400 hover:border-[#91d36b]  text-white group">
+            {/* Trigger */}
+            <div className="relative group">
+              {/* Trigger */}
+              <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer">
+                NEWBRON
+              </h3>
+
+              {/* Dropdown */}
+              <div
+                className={`absolute -left-35  transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2  rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
+    duration-300 flex flex-col items-start 
+    opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
+              >
+                <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
+                  {/* Left image */}
+                  <div className="w-full   md:w-1/4 shrink-0">
+                    <div className="relative w-2/3 h-[300px] lg:h-[400px]">
+                      <Image
+                        src={newbronDpImgOne}
+                        alt="Left"
+                        layout="fill"
+                        objectFit="cover"
+                        priority
+                      />
+                    </div>
+                  </div>
+
+                  {/* Grid content */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
+                    <div>
+                      <h4 className="font-semibold mb-2 text-left">
+                        NEWBORN BOY'S TOP
+                      </h4>
+                      {/*  NEWBORN BOY'S TOP */}
+
+                      <ul className="space-y-1">
+                        <li class="text-left text-[12px]">
+                          NB BOY'S CASUAL SHIRT
+                        </li>
+                        <li class="text-left text-[12px]">NB BOY'S NIMA</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2 text-left">
+                        NEWBORN BOY'S BOTTOM
+                      </h4>
+                      <ul className="space-y-1">
+                        <li class="text-left text-[12px]">
+                          NB BOY'S SHORT PANT
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2 text-left">
+                        NEWBORN GIRL'S SET
+                      </h4>
+                      {/* NEWBORN GIRL'S SET */}
+                      <ul className="space-y-1">
+                        <li class="text-left text-[12px]">
+                          NB GIRLS SALWAR SUIT
+                        </li>
+                        <li class="text-left text-[12px]">
+                          NB GIRLS TOP BOTTOM
+                        </li>
+                      </ul>
+                      <h4 className="font-semibold mb-2 text-left">
+                        NEWBORN GIRL'S TOP
+                      </h4>
+                      {/* NEWBORN GIRL'S TOP */}
+                      <ul className="space-y-1">
+                        <li class="text-left text-[12px]">NB GIRLS FROCK</li>
+                        <li class="text-left text-[12px]">
+                          NB GIRLS PARTY DRESS
+                        </li>
+                        <li class="text-left text-[12px]">NB GIRLS NIMA</li>
+                        <li class="text-left text-[12px]">NB GIRLS T-SHIRT</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2 text-left">
+                        NEWBORN GIRL'S BOTTOM
+                      </h4>
+                    </div>
+                  </div>
+
+                  {/* Right image */}
+                  <div className="w-full md:w-1/4 flex gap-3 shrink-0">
+                    <div className="relative w-1/2 h-[200px] lg:h-[300px]">
+                      <Image
+                        src={newbronDpImgTwo}
+                        alt="Right 1"
+                        layout="fill"
+                        objectFit="cover"
+                        priority
+                      />
+                    </div>
+                    <div className="relative w-1/2 h-[200px]  lg:h-[300px]">
+                      <Image
+                        src={newbronDpImgTheree}
+                        alt="Right 2"
+                        layout="fill"
+                        objectFit="cover"
+                        priority
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* newborn dropwen end */}
           <h3 className="text-[15px] font-semibold text-gray-700">FOOTWEAR</h3>
           <h3 className="text-[15px] font-semibold text-gray-700">
             ACCESSORIES
