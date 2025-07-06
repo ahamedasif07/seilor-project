@@ -705,7 +705,122 @@ const BottomNav = () => {
             </div>
           </div>
           {/* newborn dropwen end */}
-          <h3 className="text-[15px] font-semibold text-gray-700">FOOTWEAR</h3>
+
+          {/* footware start */}
+          <div className="relative group   text-center cursor-pointer transition-all duration-200  border-orange-400 hover:border-[#91d36b]  text-white group">
+            {/* Trigger */}
+            <div className="relative group">
+              {/* Trigger */}
+              <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer">
+                FOOTWEAR
+              </h3>
+
+              {/* Dropdown */}
+              <div
+                className={`absolute -left-59  transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2  rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
+    duration-300 flex flex-col items-start 
+    opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
+              >
+                <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
+                  {/* Left image */}
+                  <div className="w-full   md:w-1/4 shrink-0">
+                    <div className="relative w-2/3 h-[300px] lg:h-[400px]">
+                      <Image
+                        src={newbronDpImgOne}
+                        alt="Left"
+                        layout="fill"
+                        objectFit="cover"
+                        priority
+                      />
+                    </div>
+                  </div>
+
+                  {/* Grid content */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
+                    <div>
+                      <h4 className="font-semibold mb-2 text-left">
+                        MEN'S FOOTWEAR
+                      </h4>
+                      {/* MEN'S FOOTWEAR  */}
+
+                      <ul className="space-y-1">
+                        <li class="text-left text-[12px]">
+                          MEN'S HIGH ANKLE BOOT
+                        </li>
+                        <li class="text-left text-[12px]">
+                          MEN'S HIGH ANKLE SNEAKER
+                        </li>
+                        <li class="text-left text-[12px]">MEN'S CASUAL SHOE</li>
+                        <li class="text-left text-[12px]">MEN'S SNEAKER</li>
+                        <li class="text-left text-[12px]">MEN'S SANDAL</li>
+                        <li class="text-left text-[12px]">MEN'S FORMAL SHOE</li>
+                        <li class="text-left text-[12px]">MEN'S LOAFER</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2 text-left">
+                        WOMEN'S FOOTWEAR
+                      </h4>
+                      {/* WOMEN'S FOOTWEAR  */}
+                      <ul className="space-y-1">
+                        <li class="text-left text-[12px]">
+                          BLOCK HEEL SLIDE SANDAL
+                        </li>
+                        <li class="text-left text-[12px]">BALLERINA SHOE</li>
+                        <li class="text-left text-[12px]">WOMENS SHOE</li>
+                        <li class="text-left text-[12px]">WOMEN'S SANDAL</li>
+                        <li class="text-left text-[12px]">WOMEN'S SNEAKER</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2 text-left">
+                        BOY'S FOOTWEAR
+                      </h4>
+                      {/* BOY'S FOOTWEAR */}
+                      <ul className="space-y-1">
+                        <li class="text-left text-[12px]">BOY'S SNEAKER</li>
+                      </ul>
+                      <h4 className="font-semibold mb-2 text-left">
+                        GIRL'S FOOTWEAR
+                      </h4>
+                      {/*GIRL'S FOOTWEAR */}
+                      <ul className="space-y-1">
+                        <li class="text-left text-[12px]">GIRL'S SNEAKER</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2 text-left">
+                        NEWBORN GIRL'S BOTTOM
+                      </h4>
+                    </div>
+                  </div>
+
+                  {/* Right image */}
+                  <div className="w-full md:w-1/4 flex gap-3 shrink-0">
+                    <div className="relative w-1/2 h-[200px] lg:h-[300px]">
+                      <Image
+                        src={newbronDpImgTwo}
+                        alt="Right 1"
+                        layout="fill"
+                        objectFit="cover"
+                        priority
+                      />
+                    </div>
+                    <div className="relative w-1/2 h-[200px]  lg:h-[300px]">
+                      <Image
+                        src={newbronDpImgTheree}
+                        alt="Right 2"
+                        layout="fill"
+                        objectFit="cover"
+                        priority
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* footware end */}
           <h3 className="text-[15px] font-semibold text-gray-700">
             ACCESSORIES
           </h3>
