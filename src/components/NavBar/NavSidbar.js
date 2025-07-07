@@ -494,7 +494,7 @@ export default function SidebarMenu() {
       </div>
       {/* Men end */}
       {/* Women start */}
-      {/* Women start */}
+
       <div className="border-b">
         <div
           onClick={() => toggle("women")}
@@ -670,7 +670,461 @@ export default function SidebarMenu() {
       </div>
       {/* Women end */}
 
-      {/* Women end */}
+      {/* Kids start */}
+      <div className="border-b">
+        <div
+          onClick={() => toggle("kids")}
+          className={`${itemClass} ${
+            open.kids ? activeClass : "text-gray-800"
+          }`}
+        >
+          <span>KIDS</span>
+          {open.kids ? <FaMinus /> : <FaPlus />}
+        </div>
+
+        {open.kids && (
+          <div className={submenuClass}>
+            {/* BOY'S */}
+            <div className={subitemClass} onClick={() => toggle("boysSet")}>
+              BOY'S SET
+              {open.boysSet ? (
+                <FaMinus className="text-xs" />
+              ) : (
+                <FaPlus className="text-xs" />
+              )}
+            </div>
+            {open.boysSet && (
+              <div className="pl-4 space-y-1">
+                <Link href="/" className="hover:text-black block">
+                  BOY'S PREMIUM PANJABI SET
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  BOY'S KABLI SUIT
+                </Link>
+              </div>
+            )}
+
+            <div className={subitemClass} onClick={() => toggle("boysTop")}>
+              BOY'S TOP
+              {open.boysTop ? (
+                <FaMinus className="text-xs" />
+              ) : (
+                <FaPlus className="text-xs" />
+              )}
+            </div>
+            {open.boysTop && (
+              <div className="pl-4 space-y-1">
+                <Link href="/" className="hover:text-black block">
+                  BOY'S PANJABI
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  BOY'S TWIN TOP
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  BOY'S CASUAL SHIRT
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  BOY'S T-SHIRT
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  BOY'S HENLEY
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  BOY'S POLO
+                </Link>
+              </div>
+            )}
+
+            {/* GIRL'S */}
+            <div className={subitemClass} onClick={() => toggle("girlsSet")}>
+              GIRL'S SET
+              {open.girlsSet ? (
+                <FaMinus className="text-xs" />
+              ) : (
+                <FaPlus className="text-xs" />
+              )}
+            </div>
+            {open.girlsSet && (
+              <div className="pl-4 space-y-1">
+                <Link href="/" className="hover:text-black block">
+                  GIRL'S TOP WITH SKIRT
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  GIRL'S TOP BOTTOM
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  GIRL'S SALWAR SUIT
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  GIRL'S 2 PCS
+                </Link>
+              </div>
+            )}
+
+            <div className={subitemClass} onClick={() => toggle("girlsTshirt")}>
+              GIRL'S T-SHIRT
+              {open.girlsTshirt ? (
+                <FaMinus className="text-xs" />
+              ) : (
+                <FaPlus className="text-xs" />
+              )}
+            </div>
+            {open.girlsTshirt && (
+              <div className="pl-4 space-y-1">
+                <Link href="/" className="hover:text-black block">
+                  GIRL'S PARTY DRESS
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  GIRL'S KURTI
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  GIRL'S TOPS
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  GIRL'S FROCK
+                </Link>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+      {/* Kids end */}
+      {/* Newborn start */}
+      <div className="border-b">
+        <div
+          onClick={() => toggle("newborn")}
+          className={`${itemClass} ${
+            open.newborn ? activeClass : "text-gray-800"
+          }`}
+        >
+          <span>NEWBORN</span>
+          {open.newborn ? <FaMinus /> : <FaPlus />}
+        </div>
+
+        {open.newborn && (
+          <div className={submenuClass}>
+            {/* NEWBORN BOY'S TOP */}
+            <div
+              className={subitemClass}
+              onClick={() => toggle("newbornBoysTop")}
+            >
+              NEWBORN BOY'S TOP
+              {open.newbornBoysTop ? (
+                <FaMinus className="text-xs" />
+              ) : (
+                <FaPlus className="text-xs" />
+              )}
+            </div>
+            {open.newbornBoysTop && (
+              <div className="pl-4 space-y-1">
+                <Link href="/" className="hover:text-black block">
+                  NB BOY'S CASUAL SHIRT
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  NB BOY'S NIMA
+                </Link>
+              </div>
+            )}
+
+            {/* NEWBORN BOY'S BOTTOM */}
+            <div
+              className={subitemClass}
+              onClick={() => toggle("newbornBoysBottom")}
+            >
+              NEWBORN BOY'S BOTTOM
+              {open.newbornBoysBottom ? (
+                <FaMinus className="text-xs" />
+              ) : (
+                <FaPlus className="text-xs" />
+              )}
+            </div>
+            {open.newbornBoysBottom && (
+              <div className="pl-4 space-y-1">
+                <Link href="/" className="hover:text-black block">
+                  NB BOY'S SHORT PANT
+                </Link>
+              </div>
+            )}
+
+            {/* NEWBORN GIRL'S SET */}
+            <div
+              className={subitemClass}
+              onClick={() => toggle("newbornGirlsSet")}
+            >
+              NEWBORN GIRL'S SET
+              {open.newbornGirlsSet ? (
+                <FaMinus className="text-xs" />
+              ) : (
+                <FaPlus className="text-xs" />
+              )}
+            </div>
+            {open.newbornGirlsSet && (
+              <div className="pl-4 space-y-1">
+                <Link href="/" className="hover:text-black block">
+                  NB GIRLS SALWAR SUIT
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  NB GIRLS TOP BOTTOM
+                </Link>
+              </div>
+            )}
+
+            {/* NEWBORN GIRL'S TOP */}
+            <div
+              className={subitemClass}
+              onClick={() => toggle("newbornGirlsTop")}
+            >
+              NEWBORN GIRL'S TOP
+              {open.newbornGirlsTop ? (
+                <FaMinus className="text-xs" />
+              ) : (
+                <FaPlus className="text-xs" />
+              )}
+            </div>
+            {open.newbornGirlsTop && (
+              <div className="pl-4 space-y-1">
+                <Link href="/" className="hover:text-black block">
+                  NB GIRLS FROCK
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  NB GIRLS PARTY DRESS
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  NB GIRLS NIMA
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  NB GIRLS T-SHIRT
+                </Link>
+              </div>
+            )}
+
+            {/* NEWBORN GIRL'S BOTTOM */}
+            <div
+              className={subitemClass}
+              onClick={() => toggle("newbornGirlsBottom")}
+            >
+              NEWBORN GIRL'S BOTTOM
+              {open.newbornGirlsBottom ? (
+                <FaMinus className="text-xs" />
+              ) : (
+                <FaPlus className="text-xs" />
+              )}
+            </div>
+            {open.newbornGirlsBottom && (
+              <div className="pl-4 space-y-1">
+                {/* No sub-items provided for this, but can add if needed */}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+      {/* Newborn end */}
+      {/* Footwear start */}
+      <div className="border-b">
+        <div
+          onClick={() => toggle("footwear")}
+          className={`${itemClass} ${
+            open.footwear ? activeClass : "text-gray-800"
+          }`}
+        >
+          <span>FOOTWEAR</span>
+          {open.footwear ? <FaMinus /> : <FaPlus />}
+        </div>
+
+        {open.footwear && (
+          <div className={submenuClass}>
+            {/* MEN'S FOOTWEAR */}
+            <div
+              className={subitemClass}
+              onClick={() => toggle("mensFootwear")}
+            >
+              MEN'S FOOTWEAR
+              {open.mensFootwear ? (
+                <FaMinus className="text-xs" />
+              ) : (
+                <FaPlus className="text-xs" />
+              )}
+            </div>
+            {open.mensFootwear && (
+              <div className="pl-4 space-y-1">
+                <Link href="/" className="hover:text-black block">
+                  MEN'S HIGH ANKLE BOOT
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  MEN'S HIGH ANKLE SNEAKER
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  MEN'S CASUAL SHOE
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  MEN'S SNEAKER
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  MEN'S SANDAL
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  MEN'S FORMAL SHOE
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  MEN'S LOAFER
+                </Link>
+              </div>
+            )}
+
+            {/* WOMEN'S FOOTWEAR */}
+            <div
+              className={subitemClass}
+              onClick={() => toggle("womensFootwear")}
+            >
+              WOMEN'S FOOTWEAR
+              {open.womensFootwear ? (
+                <FaMinus className="text-xs" />
+              ) : (
+                <FaPlus className="text-xs" />
+              )}
+            </div>
+            {open.womensFootwear && (
+              <div className="pl-4 space-y-1">
+                <Link href="/" className="hover:text-black block">
+                  BLOCK HEEL SLIDE SANDAL
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  BALLERINA SHOE
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  WOMENS SHOE
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  WOMEN'S SANDAL
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  WOMEN'S SNEAKER
+                </Link>
+              </div>
+            )}
+
+            {/* BOY'S FOOTWEAR */}
+            <div
+              className={subitemClass}
+              onClick={() => toggle("boysFootwear")}
+            >
+              BOY'S FOOTWEAR
+              {open.boysFootwear ? (
+                <FaMinus className="text-xs" />
+              ) : (
+                <FaPlus className="text-xs" />
+              )}
+            </div>
+            {open.boysFootwear && (
+              <div className="pl-4 space-y-1">
+                <Link href="/" className="hover:text-black block">
+                  BOY'S SNEAKER
+                </Link>
+              </div>
+            )}
+
+            {/* GIRL'S FOOTWEAR */}
+            <div
+              className={subitemClass}
+              onClick={() => toggle("girlsFootwear")}
+            >
+              GIRL'S FOOTWEAR
+              {open.girlsFootwear ? (
+                <FaMinus className="text-xs" />
+              ) : (
+                <FaPlus className="text-xs" />
+              )}
+            </div>
+            {open.girlsFootwear && (
+              <div className="pl-4 space-y-1">
+                <Link href="/" className="hover:text-black block">
+                  GIRL'S SNEAKER
+                </Link>
+              </div>
+            )}
+
+            {/* NEWBORN GIRL'S BOTTOM */}
+            <div
+              className={subitemClass}
+              onClick={() => toggle("newbornGirlsBottom")}
+            >
+              NEWBORN GIRL'S BOTTOM
+              {open.newbornGirlsBottom ? (
+                <FaMinus className="text-xs" />
+              ) : (
+                <FaPlus className="text-xs" />
+              )}
+            </div>
+            {open.newbornGirlsBottom && (
+              <div className="pl-4 space-y-1">
+                {/* No subitems, add if needed */}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+      {/* Footwear end */}
+      {/* ACCESSORIES start */}
+      <div className="border-b">
+        <div
+          onClick={() => toggle("accessories")}
+          className={`${itemClass} ${
+            open.accessories ? activeClass : "text-gray-800"
+          }`}
+        >
+          <span>ACCESSORIES</span>
+          {open.accessories ? <FaMinus /> : <FaPlus />}
+        </div>
+
+        {open.accessories && (
+          <div className={submenuClass}>
+            {/* MEN's BAG */}
+            <div className={subitemClass} onClick={() => toggle("mensBag")}>
+              MEN's BAG
+              {open.mensBag ? (
+                <FaMinus className="text-xs" />
+              ) : (
+                <FaPlus className="text-xs" />
+              )}
+            </div>
+            {open.mensBag && (
+              <div className="pl-4 space-y-1">
+                <Link href="/" className="hover:text-black block">
+                  POUCH BAG
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  MEN'S LEPTOP BAG
+                </Link>
+              </div>
+            )}
+
+            {/* WOMEN'S BAG */}
+            <div className={subitemClass} onClick={() => toggle("womensBag")}>
+              WOMEN'S BAG
+              {open.womensBag ? (
+                <FaMinus className="text-xs" />
+              ) : (
+                <FaPlus className="text-xs" />
+              )}
+            </div>
+            {open.womensBag && (
+              <div className="pl-4 space-y-1">
+                <Link href="/" className="hover:text-black block">
+                  PARTY BAG
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  SHOLDER BAG
+                </Link>
+                <Link href="/" className="hover:text-black block">
+                  HAND BAG
+                </Link>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* ACCESSORIES end */}
     </div>
   );
 }
