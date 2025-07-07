@@ -615,7 +615,7 @@ const BottomNav = () => {
               >
                 <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
                   {/* Left image */}
-                  <div className="w-full   md:w-1/4 shrink-0">
+                  <div className="w-full md:w-1/4 shrink-0">
                     <div className="relative w-2/3 h-[300px] lg:h-[400px]">
                       <Image
                         src={newbronDpImgOne}
@@ -633,13 +633,12 @@ const BottomNav = () => {
                       <h4 className="font-semibold mb-2 text-left">
                         NEWBORN BOY'S TOP
                       </h4>
-                      {/*  NEWBORN BOY'S TOP */}
-
+                      {/* NEWBORN BOY'S TOP */}
                       <ul className="space-y-1">
-                        <li class="text-left text-[12px]">
+                        <li className="text-left text-[12px]">
                           NB BOY'S CASUAL SHIRT
                         </li>
-                        <li class="text-left text-[12px]">NB BOY'S NIMA</li>
+                        <li className="text-left text-[12px]">NB BOY'S NIMA</li>
                       </ul>
                     </div>
                     <div>
@@ -647,7 +646,7 @@ const BottomNav = () => {
                         NEWBORN BOY'S BOTTOM
                       </h4>
                       <ul className="space-y-1">
-                        <li class="text-left text-[12px]">
+                        <li className="text-left text-[12px]">
                           NB BOY'S SHORT PANT
                         </li>
                       </ul>
@@ -658,10 +657,10 @@ const BottomNav = () => {
                       </h4>
                       {/* NEWBORN GIRL'S SET */}
                       <ul className="space-y-1">
-                        <li class="text-left text-[12px]">
+                        <li className="text-left text-[12px]">
                           NB GIRLS SALWAR SUIT
                         </li>
-                        <li class="text-left text-[12px]">
+                        <li className="text-left text-[12px]">
                           NB GIRLS TOP BOTTOM
                         </li>
                       </ul>
@@ -670,12 +669,16 @@ const BottomNav = () => {
                       </h4>
                       {/* NEWBORN GIRL'S TOP */}
                       <ul className="space-y-1">
-                        <li class="text-left text-[12px]">NB GIRLS FROCK</li>
-                        <li class="text-left text-[12px]">
+                        <li className="text-left text-[12px]">
+                          NB GIRLS FROCK
+                        </li>
+                        <li className="text-left text-[12px]">
                           NB GIRLS PARTY DRESS
                         </li>
-                        <li class="text-left text-[12px]">NB GIRLS NIMA</li>
-                        <li class="text-left text-[12px]">NB GIRLS T-SHIRT</li>
+                        <li className="text-left text-[12px]">NB GIRLS NIMA</li>
+                        <li className="text-left text-[12px]">
+                          NB GIRLS T-SHIRT
+                        </li>
                       </ul>
                     </div>
                     <div>
@@ -696,7 +699,7 @@ const BottomNav = () => {
                         priority
                       />
                     </div>
-                    <div className="relative w-1/2 h-[200px]  lg:h-[300px]">
+                    <div className="relative w-1/2 h-[200px] lg:h-[300px]">
                       <Image
                         src={newbronDpImgTheree}
                         alt="Right 2"
@@ -723,13 +726,13 @@ const BottomNav = () => {
 
               {/* Dropdown */}
               <div
-                className={`absolute -left-59  transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2  rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
+                className={`absolute -left-59 transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2 rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
     duration-300 flex flex-col items-start 
     opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
               >
                 <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
                   {/* Left image */}
-                  <div className="w-full   md:w-1/4 shrink-0">
+                  <div className="w-full md:w-1/4 shrink-0">
                     <div className="relative w-2/3 h-[300px] lg:h-[400px]">
                       <Image
                         src={footwareDpImgOne}
@@ -747,51 +750,58 @@ const BottomNav = () => {
                       <h4 className="font-semibold mb-2 text-left">
                         MEN'S FOOTWEAR
                       </h4>
-                      {/* MEN'S FOOTWEAR  */}
-
                       <ul className="space-y-1">
-                        <li class="text-left text-[12px]">
+                        <li className="text-left text-[12px]">
                           MEN'S HIGH ANKLE BOOT
                         </li>
-                        <li class="text-left text-[12px]">
+                        <li className="text-left text-[12px]">
                           MEN'S HIGH ANKLE SNEAKER
                         </li>
-                        <li class="text-left text-[12px]">MEN'S CASUAL SHOE</li>
-                        <li class="text-left text-[12px]">MEN'S SNEAKER</li>
-                        <li class="text-left text-[12px]">MEN'S SANDAL</li>
-                        <li class="text-left text-[12px]">MEN'S FORMAL SHOE</li>
-                        <li class="text-left text-[12px]">MEN'S LOAFER</li>
+                        <li className="text-left text-[12px]">
+                          MEN'S CASUAL SHOE
+                        </li>
+                        <li className="text-left text-[12px]">MEN'S SNEAKER</li>
+                        <li className="text-left text-[12px]">MEN'S SANDAL</li>
+                        <li className="text-left text-[12px]">
+                          MEN'S FORMAL SHOE
+                        </li>
+                        <li className="text-left text-[12px]">MEN'S LOAFER</li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2 text-left">
                         WOMEN'S FOOTWEAR
                       </h4>
-                      {/* WOMEN'S FOOTWEAR  */}
                       <ul className="space-y-1">
-                        <li class="text-left text-[12px]">
+                        <li className="text-left text-[12px]">
                           BLOCK HEEL SLIDE SANDAL
                         </li>
-                        <li class="text-left text-[12px]">BALLERINA SHOE</li>
-                        <li class="text-left text-[12px]">WOMENS SHOE</li>
-                        <li class="text-left text-[12px]">WOMEN'S SANDAL</li>
-                        <li class="text-left text-[12px]">WOMEN'S SNEAKER</li>
+                        <li className="text-left text-[12px]">
+                          BALLERINA SHOE
+                        </li>
+                        <li className="text-left text-[12px]">WOMENS SHOE</li>
+                        <li className="text-left text-[12px]">
+                          WOMEN'S SANDAL
+                        </li>
+                        <li className="text-left text-[12px]">
+                          WOMEN'S SNEAKER
+                        </li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2 text-left">
                         BOY'S FOOTWEAR
                       </h4>
-                      {/* BOY'S FOOTWEAR */}
                       <ul className="space-y-1">
-                        <li class="text-left text-[12px]">BOY'S SNEAKER</li>
+                        <li className="text-left text-[12px]">BOY'S SNEAKER</li>
                       </ul>
                       <h4 className="font-semibold mb-2 text-left">
                         GIRL'S FOOTWEAR
                       </h4>
-                      {/*GIRL'S FOOTWEAR */}
                       <ul className="space-y-1">
-                        <li class="text-left text-[12px]">GIRL'S SNEAKER</li>
+                        <li className="text-left text-[12px]">
+                          GIRL'S SNEAKER
+                        </li>
                       </ul>
                     </div>
                     <div>
@@ -812,7 +822,7 @@ const BottomNav = () => {
                         priority
                       />
                     </div>
-                    <div className="relative w-1/2 h-[200px]  lg:h-[300px]">
+                    <div className="relative w-1/2 h-[200px] lg:h-[300px]">
                       <Image
                         src={footwareDpImgTheree}
                         alt="Right 2"
@@ -826,8 +836,9 @@ const BottomNav = () => {
               </div>
             </div>
           </div>
+          {/* footware start */}
 
-          {/* ACCESSORIES  */}
+          {/* ACCESSORIES start */}
           <div className="relative group">
             {/* Trigger */}
             <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer">
@@ -842,7 +853,7 @@ const BottomNav = () => {
             >
               <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
                 {/* Left image */}
-                <div className="w-full   md:w-1/4 shrink-0">
+                <div className="w-full md:w-1/4 shrink-0">
                   <div className="relative w-2/3 h-[300px] lg:h-[400px]">
                     <Image
                       src={accDpImgOne}
@@ -858,21 +869,21 @@ const BottomNav = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
                   <div>
                     <h4 className="font-semibold mb-2 text-left">MEN'sS BAG</h4>
-                    {/* ... */}
                     <ul className="space-y-1">
-                      <li class="text-left text-[12px]">POUCH BAG</li>
-                      <li class="text-left text-[12px]">MEN'S LEPTOP BAG</li>
+                      <li className="text-left text-[12px]">POUCH BAG</li>
+                      <li className="text-left text-[12px]">
+                        MEN'S LEPTOP BAG
+                      </li>
                     </ul>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-2 text-left">
                       WOMEN'S BAG
                     </h4>
-                    {/* ... */}
                     <ul className="space-y-1">
-                      <li class="text-left text-[12px]">PARTY BAG</li>
-                      <li class="text-left text-[12px]">SHOLDER BAG</li>
-                      <li class="text-left text-[12px]">HAND BAG</li>
+                      <li className="text-left text-[12px]">PARTY BAG</li>
+                      <li className="text-left text-[12px]">SHOLDER BAG</li>
+                      <li className="text-left text-[12px]">HAND BAG</li>
                     </ul>
                   </div>
                 </div>
@@ -888,7 +899,7 @@ const BottomNav = () => {
                       priority
                     />
                   </div>
-                  <div className="relative w-1/2 h-[200px]  lg:h-[300px]">
+                  <div className="relative w-1/2 h-[200px] lg:h-[300px]">
                     <Image
                       src={accDpImgTheree}
                       alt="Right 2"
@@ -901,7 +912,7 @@ const BottomNav = () => {
               </div>
             </div>
           </div>
-          {/*ACCESSORIES  */}
+          {/*ACCESSORIES end */}
         </div>
       </div>
     </div>
