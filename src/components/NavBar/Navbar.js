@@ -1,16 +1,20 @@
 import React from "react";
+
+import BottomNav from "./BottomNav";
 import TopNavBar from "./TopNavBar";
 import MiddelNav from "./MiddelNav";
-import BottomNav from "./BottomNav";
+import MiniDeviceNav from "./MiniDeviceNav";
 
 const Navbar = () => {
   return (
     <div>
-      <div>
-        <TopNavBar />
+      <TopNavBar />
+      <div className="">
         <MiddelNav />
-
         <BottomNav />
+      </div>
+      <div className="px-10">
+        <MiniDeviceNav />
       </div>
     </div>
   );
