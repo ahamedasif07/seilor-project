@@ -30,9 +30,9 @@ export default function SidebarMenu() {
   const subitemClass = "cursor-pointer hover:text-black flex justify-between";
 
   return (
-    <div className="w-full max-w-xs bg-white border border-gray-200 text-sm font-medium">
+    <div className="w-full max-w-xs bg-white   text-sm font-medium">
       {/* SUMMER COLLECTION  start*/}
-      <div className="border-b">
+      <div className=" border-b border-gray-300">
         <div
           onClick={() => toggle("summer")}
           className={`${itemClass} ${
@@ -59,7 +59,7 @@ export default function SidebarMenu() {
       {/* SUMMER COLLECTION  end*/}
 
       {/* NEW ARRIVAL start*/}
-      <div className="border-b">
+      <div className=" border-b border-gray-300">
         <div
           onClick={() => toggle("newArrival")}
           className={`${itemClass} ${
@@ -339,7 +339,7 @@ export default function SidebarMenu() {
       </div>
       {/* NEW ARRIVAL end*/}
       {/* Men start */}
-      <div className="border-b">
+      <div className=" border-b border-gray-300">
         <div
           onClick={() => toggle("summer")}
           className={`${itemClass} ${
@@ -495,7 +495,7 @@ export default function SidebarMenu() {
       {/* Men end */}
       {/* Women start */}
 
-      <div className="border-b">
+      <div className=" border-b border-gray-300">
         <div
           onClick={() => toggle("women")}
           className={`${itemClass} ${
@@ -671,7 +671,7 @@ export default function SidebarMenu() {
       {/* Women end */}
 
       {/* Kids start */}
-      <div className="border-b">
+      <div className=" border-b border-gray-300">
         <div
           onClick={() => toggle("kids")}
           className={`${itemClass} ${
@@ -790,7 +790,7 @@ export default function SidebarMenu() {
       </div>
       {/* Kids end */}
       {/* Newborn start */}
-      <div className="border-b">
+      <div className=" border-b border-gray-300">
         <div
           onClick={() => toggle("newborn")}
           className={`${itemClass} ${
@@ -920,7 +920,7 @@ export default function SidebarMenu() {
       </div>
       {/* Newborn end */}
       {/* Footwear start */}
-      <div className="border-b">
+      <div className=" border-b border-gray-300">
         <div
           onClick={() => toggle("footwear")}
           className={`${itemClass} ${
@@ -1065,7 +1065,7 @@ export default function SidebarMenu() {
       </div>
       {/* Footwear end */}
       {/* ACCESSORIES start */}
-      <div className="border-b">
+      <div className=" border-b border-gray-300">
         <div
           onClick={() => toggle("accessories")}
           className={`${itemClass} ${
