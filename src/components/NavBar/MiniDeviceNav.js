@@ -7,12 +7,12 @@ import { IoSearch } from "react-icons/io5";
 import SidebarMenu from "./NavSidbar";
 
 const MiniDeviceNav = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <div className="flex items-center justify-between">
         <div>
-          <span onClick={() => setMenuOpen(!menuOpen)} className="text-[22px]">
+          <span onClick={() => setIsOpen(!isOpen)} className="text-[22px]">
             <IoMdMenu />
           </span>
         </div>
@@ -25,9 +25,9 @@ const MiniDeviceNav = () => {
           </span>
         </div>
       </div>
-      {menuOpen && (
+      {isOpen && (
         <div>
-          <SidebarMenu />
+          <SidebarMenu isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
       )}
     </div>
