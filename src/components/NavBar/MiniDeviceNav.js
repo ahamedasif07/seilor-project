@@ -9,8 +9,8 @@ import SidebarMenu from "./NavSidbar";
 const MiniDeviceNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div>
-      <div className="flex items-center justify-between">
+    <div className="lg:hidden block ">
+      <div className="flex items-center justify-between px-5 ">
         <div>
           <span onClick={() => setIsOpen(!isOpen)} className="text-[22px]">
             <IoMdMenu />

@@ -53,7 +53,7 @@ export default function SidebarMenu({ isOpen, setIsOpen }) {
     <div
       ref={sidebarRef}
       className={`
-          fixed top-0 left-0 h-full w-full  max-w-xs bg-white border-r-2 px-3 py- text-sm font-medium z-50
+          fixed top-0 left-0 h-full w-full  max-w-xs bg-white border-r-2 px-4 py-8 text-sm font-medium z-50
           transform transition-all duration-500 ease-in-out
           ${isOpen ? "translate-x-0 " : "-translate-x-full "}
         `}
