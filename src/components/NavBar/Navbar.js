@@ -13,7 +13,7 @@ const Navbar = () => {
         <MiddelNav />
         <BottomNav />
       </div>
-      <div className="px-10">
+      <div className="">
         <MiniDeviceNav />
       </div>
     </div>

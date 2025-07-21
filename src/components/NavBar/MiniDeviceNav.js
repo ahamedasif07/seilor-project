@@ -10,7 +10,7 @@ const MiniDeviceNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="lg:hidden block ">
-      <div className="flex items-center justify-between px-5 ">
+      <div className="flex items-center justify-between px-8 ">
         <div>
           <span onClick={() => setIsOpen(!isOpen)} className="text-[22px]">
             <IoMdMenu />
