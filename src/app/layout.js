@@ -24,8 +24,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
         cz-shortcut-listen="true"
       >
-        <Navbar />
-        {children}
+        <div className="overflow-hidden">
+          <Navbar />
+          {children}
+        </div>
       </body>
     </html>
   );
