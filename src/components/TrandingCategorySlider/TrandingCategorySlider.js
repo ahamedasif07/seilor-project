@@ -82,7 +82,7 @@ const TrandingCategorySlider = () => {
               </div>
 
               {/* Title Overlay */}
-              <div className="absolute bottom-5 left-1/2 -translate-x-1/2 bg-white w-[70%] hover:px-5 transition-all duration-300 ease-in-out text-center py-[7px] z-10 shadow-md ">
+              <div className="absolute bottom-5 left-1/2 -translate-x-1/2 bg-white w-[70%] hover:w-[90%] transition-all duration-300 ease-in-out text-center py-[7px] z-10 shadow-md ">
                 <h2 className="text-[18px] font-semibold">{item.title}</h2>
               </div>
             </div>
