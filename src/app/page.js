@@ -7,7 +7,13 @@ export default function Home() {
     <div>
       <div className="overflow-hidden">
         <Hero />
-        <TrandingProductSlider />
+
+        <div>
+          <h2 className="text-[37px] font-bold text-gray-950 text-center py-[35px]">
+            Trending Categories
+          </h2>
+          <TrandingProductSlider />
+        </div>
       </div>
     </div>
   );

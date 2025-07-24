@@ -50,7 +50,7 @@ const TrandingCategorySlider = () => {
   const router = useRouter();
 
   return (
-    <div className="relative w-full px-4 py-8 overflow-hidden">
+    <div className="relative w-full px-4  overflow-hidden">
       <Swiper
         modules={[Autoplay, Pagination]}
         slidesPerView={1}
