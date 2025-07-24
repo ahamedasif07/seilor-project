@@ -52,13 +52,12 @@ const TrandingCategorySlider = () => {
   return (
     <div className="relative w-full px-4  overflow-hidden">
       <Swiper
-        modules={[Autoplay, Pagination]}
+        modules={[Autoplay]}
         slidesPerView={1}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
-        pagination={{ clickable: true }}
         breakpoints={{
           640: { slidesPerView: 2, spaceBetween: 20 },
           768: { slidesPerView: 3, spaceBetween: 25 },
