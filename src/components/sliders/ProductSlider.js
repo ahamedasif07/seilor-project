@@ -1,9 +1,14 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
+import { FiShoppingCart } from "react-icons/fi";
+import { AiOutlineEye } from "react-icons/ai";
+import { BiGitCompare } from "react-icons/bi";
+import { GiScales } from "react-icons/gi";
+import { PiScales } from "react-icons/pi";
 
 const products = [
   {
@@ -52,35 +57,49 @@ const products = [
 
 export default function ProductSlider() {
   return (
-    <div className="relative px-4 md:px-10 py-8">
+    <div className="relative px-4 md:px-10 ">
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         navigation={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         spaceBetween={20}
         slidesPerView={1.5}
         breakpoints={{
-          640: {
-            slidesPerView: 2.2,
-          },
-          768: {
-            slidesPerView: 3,
-          },
-          1024: {
-            slidesPerView: 4.2,
-          },
+          640: { slidesPerView: 2, spaceBetween: 20 },
+          768: { slidesPerView: 3, spaceBetween: 25 },
+          1024: { slidesPerView: 4, spaceBetween: 30 },
         }}
         className="group"
       >
         {products.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="bg-white shadow-md rounded-md overflow-hidden">
-              <Image
-                src={item.image}
-                alt={item.title}
-                width={500}
-                height={500}
-                className="w-full h-[400px] object-cover"
-              />
+            <div className="bg-white group relative overflow-hidden">
+              <div>
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  width={500}
+                  height={500}
+                  className="w-full h-[400px] object-cover"
+                />
+                {/* icons */}
+                <div className="absolute bottom-22 left-28 opacity-0 translate-y-6 pointer-events-none group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 ease-in-out">
+                  <div className="flex items-center justify-center gap-3 py-2">
+                    <button className="text-gray-600 py-2 px-[9px] bg-white/80 hover:text-black transition">
+                      <FiShoppingCart size={20} />
+                    </button>
+                    <button className="text-gray-600 py-2 px-[9px] bg-white/80 hover:text-black transition">
+                      <AiOutlineEye size={20} />
+                    </button>
+                    <button className="text-gray-600 py-2 px-[9px] bg-white/80 hover:text-black transition">
+                      <PiScales size={20} />
+                    </button>
+                  </div>
+                </div>
+              </div>
               <div className="text-center p-3">
                 <h3 className="text-[15px] font-semibold text-gray-800 uppercase">
                   {item.title}
