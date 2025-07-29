@@ -66,24 +66,22 @@ export default function ProductSlider() {
           disableOnInteraction: false,
         }}
         spaceBetween={20}
-        slidesPerView={1.5}
+        slidesPerView={1}
         breakpoints={{
           640: { slidesPerView: 2, spaceBetween: 20 },
           768: { slidesPerView: 3, spaceBetween: 25 },
           1024: { slidesPerView: 4, spaceBetween: 30 },
         }}
-        className="group"
       >
         {products.map((item) => (
           <SwiperSlide key={item.id}>
             <div className="bg-white group relative overflow-hidden">
-              <div>
+              <div className="w-full h-[280px]">
                 <Image
                   src={item.image}
                   alt={item.title}
-                  width={500}
-                  height={500}
-                  className="w-full h-[400px] object-cover"
+                  fill
+                  className=" object-fil"
                 />
                 {/* icons */}
                 <div className="absolute bottom-22 left-28 opacity-0 translate-y-6 pointer-events-none group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 ease-in-out">
