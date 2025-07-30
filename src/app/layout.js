@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/NavBar/Navbar";
+import { DataContext, DataProvider } from "@/components/shared/DataContex";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,8 +26,10 @@ export default function RootLayout({ children }) {
         cz-shortcut-listen="true"
       >
         <div className="overflow-hidden">
-          <Navbar />
-          {children}
+          <DataProvider>
+            <Navbar />
+            {children}
+          </DataProvider>
         </div>
       </body>
     </html>

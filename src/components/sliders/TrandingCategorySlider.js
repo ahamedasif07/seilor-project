@@ -76,7 +76,7 @@ const TrandingCategorySlider = () => {
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-fil"
+                  className="object-fill"
                 />
               </div>
 

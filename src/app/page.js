@@ -1,9 +1,28 @@
+"use client";
 import Hero from "@/components/hero/Hero";
+import ProductFilteringBySection from "@/components/ProductFiltering]/ProductFilteringBySection";
+import { DataContext } from "@/components/shared/DataContex";
+import DataFatching from "@/components/shared/dataFatching/DataFatching";
 import ProductSlider from "@/components/sliders/ProductSlider";
 import TrandingProductSlider from "@/components/sliders/TrandingCategorySlider";
 import Image from "next/image";
+import { cache, useContext, useEffect, useState } from "react";
 
 export default function Home() {
+  const [newArrival, setNewArrival] = useState([]);
+  const { data } = useContext(DataContext);
+
+  useEffect(() => {
+    if (!data || data.length === 0) return;
+
+    const filtered = data.filter(
+      (product) => product.section?.toLowerCase() === "new arrival"
+    );
+
+    console.log("Filtered New Arrival Products:", filtered);
+    setNewArrival(filtered);
+  }, [data]);
+
   return (
     <div>
       <div className="overflow-hidden">
@@ -24,9 +43,11 @@ export default function Home() {
               new arrivals
             </h2>
           </div>
-          <ProductSlider />
+          <ProductSlider products={newArrival} />
+          <ProductFilteringBySection />
         </div>
       </div>
+      {/* <DataFatching /> */}
     </div>
   );
 }
