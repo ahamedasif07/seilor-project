@@ -44,7 +44,6 @@ export default function Home() {
             </h2>
           </div>
           <ProductSlider products={newArrival} />
-          <ProductFilteringBySection />
         </div>
       </div>
       {/* <DataFatching /> */}

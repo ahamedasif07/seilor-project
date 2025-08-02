@@ -127,7 +127,7 @@ export default function ProductSlider({ products }) {
                     {product.title}
                   </h3>
                   <p className="text-sm text-gray-600 mt-1 font-bold ">
-                    <span className="text-[16px] text-gray-700 px-2 font-extrabold">
+                    <span className="text-[16px] text-gray-700 pr-2 font-extrabold">
                       ৳
                     </span>
                     {product.priceBdt}
