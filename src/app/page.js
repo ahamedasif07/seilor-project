@@ -9,18 +9,27 @@ import Image from "next/image";
 import { cache, useContext, useEffect, useState } from "react";
 
 export default function Home() {
-  const [newArrival, setNewArrival] = useState([]);
   const { data } = useContext(DataContext);
+  const [newArrival, setNewArrival] = useState([]);
+  const [featuredProduct, setFeaturedProduct] = useState([]);
 
+  // new araivle peoduct filtaring
   useEffect(() => {
     if (!data || data.length === 0) return;
 
-    const filtered = data.filter(
+    const filteredNewArrival = data.filter(
       (product) => product.section?.toLowerCase() === "new arrival"
     );
 
-    console.log("Filtered New Arrival Products:", filtered);
-    setNewArrival(filtered);
+    const filteredFeatured = data.filter(
+      (product) => product.section?.toLowerCase() === "featured product"
+    );
+
+    setNewArrival(filteredNewArrival);
+    setFeaturedProduct(filteredFeatured);
+
+    console.log("New Arrival Products:", filteredNewArrival);
+    console.log("Featured Products:", filteredFeatured);
   }, [data]);
 
   return (
@@ -44,6 +53,13 @@ export default function Home() {
             </h2>
           </div>
           <ProductSlider products={newArrival} />
+        </div>
+        <div>
+          <h2 className="text-[37px] font-bold text-gray-950 text-center py-[35px]">
+            Feature product
+          </h2>
+
+          <ProductSlider products={featuredProduct} />
         </div>
       </div>
       {/* <DataFatching /> */}

@@ -91,7 +91,7 @@ export default function ProductSlider({ products }) {
           1024: { slidesPerView: 4, spaceBetween: 30 },
         }}
       >
-        {products.map((product) => (
+        {products?.map((product) => (
           <SwiperSlide key={product.id}>
             <div className="bg-white group relative overflow-hidden">
               <div className="absolute top-5 right-5 z-40 pointer-events-none group-hover:pointer-events-auto ">
