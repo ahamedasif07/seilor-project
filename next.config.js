@@ -2,7 +2,7 @@
 const nextConfig = {
   // You can put your config options here
   images: {
-    domains: ["i.ibb.co"], // ✅ Allow external image domain
+    domains: ["i.ibb.co"],
   },
 };
 

@@ -5,7 +5,10 @@ import Image from "next/image";
 
 const images = [
   "https://i.ibb.co/4RYLzmJ4/project-sailor-home-page033.jpg",
+  "https://i.ibb.co/x4SPhpc/vu9-Q2kdsl-Qy-GGq48z-Zqoc3-I3h7-XNicer-F5f-Ibt-XU.jpg",
   "https://i.ibb.co/qZYTkTD/project-sailor-home-page029.jpg",
+  "https://i.ibb.co/sv6p6jWr/ktpzsrp-GSS8b-VGzx-X8-Oe1r2dp-Si79rwz-PAVx6-Fdf.jpg",
+  "https://i.ibb.co/fYGMWxtg/f-Jhlld-HSKJN2t-EAc-P5-Waauo-Hg-JYJ20d-Awi7-GQDfn.jpg",
 ];
 
 const Carousel = () => {
