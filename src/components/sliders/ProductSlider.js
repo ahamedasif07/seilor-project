@@ -86,6 +86,7 @@ export default function ProductSlider({ products }) {
         spaceBetween={20}
         slidesPerView={1}
         breakpoints={{
+          626: { slidesPerView: 2, spaceBetween: 5 },
           640: { slidesPerView: 2, spaceBetween: 20 },
           768: { slidesPerView: 3, spaceBetween: 25 },
           1024: { slidesPerView: 4, spaceBetween: 30 },
@@ -105,7 +106,7 @@ export default function ProductSlider({ products }) {
                     src={product.image1 ? product.image1 : product.image2}
                     alt={product.title}
                     fill
-                    className="object-fill"
+                    className="object-cover md:object-fill"
                   />
                   {/* icons */}
                   <div className="absolute bottom-3 left-26 opacity-0 translate-y-6 pointer-events-none group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 ease-in-out">
