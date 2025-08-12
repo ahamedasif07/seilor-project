@@ -86,7 +86,7 @@ export default function ProductSlider({ products }) {
         spaceBetween={20}
         slidesPerView={1}
         breakpoints={{
-          626: { slidesPerView: 2, spaceBetween: 5 },
+          440: { slidesPerView: 1, spaceBetween: 5 },
           640: { slidesPerView: 2, spaceBetween: 20 },
           768: { slidesPerView: 3, spaceBetween: 25 },
           1024: { slidesPerView: 4, spaceBetween: 30 },

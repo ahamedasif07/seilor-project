@@ -25,6 +25,7 @@ import accDpImgTow from "../../../public/images/project-sailor-home-page027.jpg"
 import accDpImgTheree from "../../../public/images/project-sailor-home-page028.jpg";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const BottomNav = () => {
   return (
@@ -34,19 +35,21 @@ const BottomNav = () => {
           {/* summer collectoion dropdowen start */}
           <div className="relative group">
             {/* Trigger */}
-            <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer">
-              SUMMER COLLECTION/25
-            </h3>
-            {/* Dropdown */}
+            <Link href="/SUMMERCOLLECTION">
+              <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer">
+                SUMMER COLLECTION/25
+              </h3>
+            </Link>
 
+            {/* Dropdown */}
             <div
-              className={`absolute left-108 transform -translate-x-1/2 z-[1000] px-[10px]  w-[99vw] top-full py-2 rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
-    duration-300 flex flex-col items-start 
-    opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
+              className={`absolute left-108 transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2 rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
+          duration-300 flex flex-col items-start 
+          opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
             >
               <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
                 {/* Left image */}
-                <div className="w-full   md:w-1/4 shrink-0">
+                <div className="w-full md:w-1/4 shrink-0">
                   <div className="relative w-2/3 h-[300px] lg:h-[400px]">
                     <Image
                       src={summweDpimgOne}
@@ -61,15 +64,19 @@ const BottomNav = () => {
                 {/* Grid content */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
                   <div>
-                    <h4 className="font-semibold mb-2 text-left">
-                      MEN SUMMER COMFORT
-                    </h4>
+                    <Link href="/men-summer-comfort">
+                      <h4 className="font-semibold mb-2 text-left cursor-pointer hover:text-blue-500">
+                        MEN SUMMER COMFORT
+                      </h4>
+                    </Link>
                     {/* ... */}
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2 text-left">
-                      WOMEN SUMMER COMFORT
-                    </h4>
+                    <Link href="/women-summer-comfort">
+                      <h4 className="font-semibold mb-2 text-left cursor-pointer hover:text-blue-500">
+                        WOMEN SUMMER COMFORT
+                      </h4>
+                    </Link>
                     {/* ... */}
                   </div>
                 </div>
@@ -85,7 +92,7 @@ const BottomNav = () => {
                       priority
                     />
                   </div>
-                  <div className="relative w-1/2 h-[200px]  lg:h-[300px]">
+                  <div className="relative w-1/2 h-[200px] lg:h-[300px]">
                     <Image
                       src={summweDpimgTheree}
                       alt="Right 2"
