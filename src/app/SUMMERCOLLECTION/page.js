@@ -4,7 +4,7 @@ import React from "react";
 const SUMMERCOLLECTION = () => {
   return (
     <div>
-      <PageSideBar />
+      <PageSideBar category="SUMMERCOLLECTION/25" />
     </div>
   );
 };
