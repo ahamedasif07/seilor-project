@@ -90,68 +90,70 @@ const PageSideBar = ({ children, category, image = pageBanerDefutImg }) => {
           </select>
         </div>
       </div>
-
-      <aside className="w-68 bg-white border-t  border-gray-500 mx-5 my-2 h-screen ">
-        {/*  Sections */}
-        {sections.map((section, idx) => (
-          <div key={idx} className="mt-4">
-            <div
-              className="flex justify-between items-center cursor-pointer "
-              onClick={() => toggleSection(section.name)}
-            >
-              <h3 className="font-bold text-[16px] text-[#4D4D4D]">
-                {section.name}
-              </h3>
-              <span className="font-bold text-[16px] text-[#4D4D4D]">
-                {openSection === section.name ? (
-                  <AiOutlineMinus />
-                ) : (
-                  <AiOutlinePlus />
-                )}
-              </span>
-            </div>
-
-            {openSection === section.name && (
-              <ul
-                className={`space-y-1 p-2 ${
-                  section.items.length > 6 ? "max-h-60 overflow-y-auto" : ""
-                }`}
+      <div className="flex gap-1 ">
+        <aside className="w-1/5 bg-white border-t  border-gray-500 mx-5 my-2 h-screen ">
+          {/*  Sections */}
+          {sections.map((section, idx) => (
+            <div key={idx} className="mt-4">
+              <div
+                className="flex justify-between items-center cursor-pointer "
+                onClick={() => toggleSection(section.name)}
               >
-                {section.items.map((item, i) => (
-                  <li key={i} className="flex items-center">
-                    <input
-                      type="checkbox"
-                      id={`${section.name}-${i}`}
-                      className="mr-2"
-                    />
-                    <label
-                      htmlFor={`${section.name}-${i}`}
-                      className="text-sm cursor-pointer uppercase"
-                    >
-                      {item}
-                    </label>
-                  </li>
-                ))}
-              </ul>
-            )}
+                <h3 className="font-bold text-[16px] text-[#4D4D4D]">
+                  {section.name}
+                </h3>
+                <span className="font-bold text-[16px] text-[#4D4D4D]">
+                  {openSection === section.name ? (
+                    <AiOutlineMinus />
+                  ) : (
+                    <AiOutlinePlus />
+                  )}
+                </span>
+              </div>
+
+              {openSection === section.name && (
+                <ul
+                  className={`space-y-1 p-2 ${
+                    section.items.length > 6 ? "max-h-60 overflow-y-auto" : ""
+                  }`}
+                >
+                  {section.items.map((item, i) => (
+                    <li key={i} className="flex items-center">
+                      <input
+                        type="checkbox"
+                        id={`${section.name}-${i}`}
+                        className="mr-2"
+                      />
+                      <label
+                        htmlFor={`${section.name}-${i}`}
+                        className="text-sm cursor-pointer uppercase"
+                      >
+                        {item}
+                      </label>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+          {/* progres slider */}
+          <div className="w-full max-w-xs px-2 py-4 bg-white ">
+            <Slider
+              getAriaLabel={() => "Temperature range"}
+              value={value}
+              onChange={handleChange}
+              valueLabelDisplay="auto"
+              sx={{
+                color: "#9C27B0", // Tailwind's blue-500
+              }}
+            />
+            <p className="mt-2 text-md text-gray-700 flex justify-between ">
+              <h2>0 </h2> <h2>220900 </h2>
+            </p>
           </div>
-        ))}
-        {/* progres slider */}
-        <div className="w-full max-w-xs px-2 py-4 bg-white ">
-          <Slider
-            getAriaLabel={() => "Temperature range"}
-            value={value}
-            onChange={handleChange}
-            valueLabelDisplay="auto"
-            sx={{
-              color: "#9C27B0", // Tailwind's blue-500
-            }}
-          />
-          <p className="mt-2 text-md text-gray-700 flex justify-between ">
-            <h2>0 </h2> <h2>220900 </h2>
-          </p>
-        </div>
-      </aside>
+        </aside>
+        <div className="w-5/5">{children}</div>
+      </div>
     </div>
   );
 };
