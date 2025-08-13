@@ -3,8 +3,9 @@ import { Slider } from "@mui/material";
 import Image from "next/image";
 import { useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import pageBanerDefutImg from "../../../public/images/project-sailor-home-page034.jpg";
 
-const PageSideBar = ({ children, category, image }) => {
+const PageSideBar = ({ children, category, image = pageBanerDefutImg }) => {
   const [openSection, setOpenSection] = useState("");
   const [value, setValue] = useState([20, 37]);
 
@@ -59,7 +60,15 @@ const PageSideBar = ({ children, category, image }) => {
     <div>
       {/* page top part */}
       <div>
-        <Image src={image ? image : null} alt="page baner image" />
+        <div className="relative w-full h-[250px]">
+          <Image
+            src={image}
+            alt="page banner image"
+            fill // makes the image take full width & height of parent
+            style={{ objectFit: "cover" }} // replaces old objectFit prop
+            priority
+          />
+        </div>
         <h2 className="bg-[#F6F6F6] py-5 md:px-8 px-4 text-[20px] font-bold text-[#4D4D4D]">
           {category ? category : null}
         </h2>
@@ -82,7 +91,7 @@ const PageSideBar = ({ children, category, image }) => {
         </div>
       </div>
 
-      <aside className="w-68 bg-white border-t  border-gray-500 m-5 h-screen ">
+      <aside className="w-68 bg-white border-t  border-gray-500 mx-5 my-2 h-screen ">
         {/*  Sections */}
         {sections.map((section, idx) => (
           <div key={idx} className="mt-4">
