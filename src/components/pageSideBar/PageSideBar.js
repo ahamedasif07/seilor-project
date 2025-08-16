@@ -69,7 +69,7 @@ const PageSideBar = ({ children, category, image = pageBanerDefutImg }) => {
             priority
           />
         </div>
-        <h2 className="bg-[#F6F6F6] py-5 md:px-8 px-4 text-[20px] font-bold text-[#4D4D4D]">
+        <h2 className="bg-[#F6F6F6] py-5 md:px-8 px-4 text-[20px] uppercase  font-bold text-[#4D4D4D]">
           {category ? category : null}
         </h2>
         {/* select menu */}
@@ -148,7 +148,7 @@ const PageSideBar = ({ children, category, image = pageBanerDefutImg }) => {
               }}
             />
             <p className="mt-2 text-md text-gray-700 flex justify-between ">
-              <h2>0 </h2> <h2>220900 </h2>
+              <span>0 </span> <span>220900 </span>
             </p>
           </div>
         </aside>
