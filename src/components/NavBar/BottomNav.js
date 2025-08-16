@@ -64,7 +64,7 @@ const BottomNav = () => {
                 {/* Grid content */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
                   <div>
-                    <Link href="/men-summer-comfort">
+                    <Link href="/MENSUMMERCOMFORT">
                       <h4 className="font-semibold mb-2 text-left cursor-pointer hover:text-blue-500">
                         MEN SUMMER COMFORT
                       </h4>
