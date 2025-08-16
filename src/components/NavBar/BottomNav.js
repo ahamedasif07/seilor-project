@@ -33,19 +33,20 @@ const BottomNav = () => {
       <div className=" py-2 ">
         <div className="flex items-center justify-center gap-6">
           {/* summer collectoion dropdowen start */}
+          {/* summer collectoion dropdowen start */}
           <div className="relative group">
             {/* Trigger */}
-            <Link href="/SUMMERCOLLECTION">
-              <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer">
-                SUMMER COLLECTION/25
+            <Link href="/summer-collection">
+              <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer uppercase">
+                Summer Collection/25
               </h3>
             </Link>
 
             {/* Dropdown */}
             <div
               className={`absolute left-108 transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2 rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
-          duration-300 flex flex-col items-start 
-          opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
+        duration-300 flex flex-col items-start 
+        opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
             >
               <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
                 {/* Left image */}
@@ -64,20 +65,18 @@ const BottomNav = () => {
                 {/* Grid content */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
                   <div>
-                    <Link href="/MENSUMMERCOMFORT">
-                      <h4 className="font-semibold mb-2 text-left cursor-pointer hover:text-blue-500">
-                        MEN SUMMER COMFORT
+                    <Link href="/men-summer-comfort">
+                      <h4 className="font-semibold mb-2 text-left cursor-pointer hover:text-blue-500  uppercase">
+                        Men Summer Comfort
                       </h4>
                     </Link>
-                    {/* ... */}
                   </div>
                   <div>
                     <Link href="/women-summer-comfort">
-                      <h4 className="font-semibold mb-2 text-left cursor-pointer hover:text-blue-500">
-                        WOMEN SUMMER COMFORT
+                      <h4 className="font-semibold mb-2 text-left cursor-pointer hover:text-blue-500  uppercase">
+                        Women Summer Comfort
                       </h4>
                     </Link>
-                    {/* ... */}
                   </div>
                 </div>
 
@@ -105,6 +104,7 @@ const BottomNav = () => {
               </div>
             </div>
           </div>
+
           {/* summer collection dropdowen end */}
 
           {/* new araivle   dropdowen start */}

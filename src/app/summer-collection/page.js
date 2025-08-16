@@ -1,7 +1,7 @@
 import PageSideBar from "@/components/pageSideBar/PageSideBar";
 import React from "react";
 
-const SUMMERCOLLECTION = () => {
+const SummerCollection = () => {
   return (
     <div>
       <PageSideBar category="SUMMERCOLLECTION/25">
@@ -25,4 +25,4 @@ const SUMMERCOLLECTION = () => {
   );
 };
 
-export default SUMMERCOLLECTION;
+export default SummerCollection;
