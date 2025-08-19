@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
           </button>
         </div>
         <div className="h-[420px]    overflow-hidden">
-          <div className="relative w-[340px] h-[340px]">
+          <div className="relative w-[340px] h-[360px]">
             <Image
               src={product.image1 ? product.image1 : product.image2}
               alt={product.title}
@@ -38,7 +38,7 @@ const ProductCard = ({ product }) => {
             </div>
           </div>
           <div className="text-left p-3">
-            <h3 className="text-[19px] font-semibold text-gray-700 uppercase">
+            <h3 className="text-[14px] font-semibold text-gray-700 uppercase">
               {product.title}
             </h3>
             <p className="text-sm text-gray-600 mt-1 font-bold ">

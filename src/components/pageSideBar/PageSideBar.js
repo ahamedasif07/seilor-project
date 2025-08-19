@@ -57,10 +57,10 @@ const PageSideBar = ({ children, category, image = pageBanerDefutImg }) => {
   ];
 
   return (
-    <div>
+    <div className="">
       {/* page top part */}
       <div>
-        <div className="relative w-full h-[250px]">
+        <div className="relative w-full h-[250px] ">
           <Image
             src={image}
             alt="page banner image"
@@ -90,13 +90,13 @@ const PageSideBar = ({ children, category, image = pageBanerDefutImg }) => {
           </select>
         </div>
       </div>
-      <div className="flex gap-1 ">
-        <aside className="w-1/5 bg-white border-t  border-gray-500 mx-5 my-2 h-screen ">
-          {/*  Sections */}
+      <div className="flex min-h-screen ">
+        {/* Sidebar */}
+        <aside className="w-1/5 hidden lg:block h-screen sticky top-0 overflow-y-auto bg-white border-t border-gray-500 p-4">
           {sections.map((section, idx) => (
             <div key={idx} className="mt-4">
               <div
-                className="flex justify-between items-center cursor-pointer "
+                className="flex justify-between items-center cursor-pointer"
                 onClick={() => toggleSection(section.name)}
               >
                 <h3 className="font-bold text-[16px] text-[#4D4D4D]">
@@ -136,23 +136,25 @@ const PageSideBar = ({ children, category, image = pageBanerDefutImg }) => {
               )}
             </div>
           ))}
-          {/* progres slider */}
-          <div className="w-full max-w-xs px-2 py-4 bg-white ">
+
+          {/* Progress Slider */}
+          <div className="w-full max-w-xs px-2 py-4 bg-white mt-6">
             <Slider
               getAriaLabel={() => "Temperature range"}
               value={value}
               onChange={handleChange}
               valueLabelDisplay="auto"
-              sx={{
-                color: "#9C27B0", // Tailwind's blue-500
-              }}
+              sx={{ color: "#9C27B0" }}
             />
-            <p className="mt-2 text-md text-gray-700 flex justify-between ">
-              <span>0 </span> <span>220900 </span>
+            <p className="mt-2 text-md text-gray-700 flex justify-between">
+              <span>0</span>
+              <span>220900</span>
             </p>
           </div>
         </aside>
-        <div className="w-5/5">{children}</div>
+
+        {/* Main Content */}
+        <main className="flex-1 overflow-auto">{children}</main>
       </div>
     </div>
   );

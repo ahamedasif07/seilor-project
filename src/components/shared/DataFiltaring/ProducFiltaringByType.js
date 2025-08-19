@@ -21,9 +21,11 @@ const ProductFiltaringByType = ({ type }) => {
   return (
     <div>
       {filtaredData.length > 0 ? (
-        filtaredData.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 pb-5">
+          {filtaredData.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
       ) : (
         <p>No products found.</p>
       )}
