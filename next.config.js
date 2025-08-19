@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // You can put your config options here
   images: {
-    domains: ["i.ibb.co", "i.ibb.co.com "],
+    domains: ["i.ibb.co"], // Only valid i.ibb.co domain
   },
 };
 
