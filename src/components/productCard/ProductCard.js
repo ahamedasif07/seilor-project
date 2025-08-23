@@ -8,19 +8,19 @@ import { PiScales } from "react-icons/pi";
 const ProductCard = ({ product }) => {
   return (
     <div>
-      <div className="bg-white group relative overflow-hidden">
+      <div className="bg-white group relative overflow-hidden border-2 border-red-500">
         <div className="absolute top-5 right-5 z-40 pointer-events-none group-hover:pointer-events-auto ">
           <button className="text-gray-800 py-2 px-[9px] hover:text-red-600 duration-200 ease-in-out rounded-full hover:bg-white/80  transition">
             <FaRegHeart size={20} />
           </button>
         </div>
         <div className="h-[420px]    overflow-hidden">
-          <div className="relative w-[340px] h-[360px]">
+          <div className="relative w-full h-[360px]">
             <Image
               src={product.image1 ? product.image1 : product.image2}
               alt={product.title}
               fill
-              className="object-cover md:object-fill"
+              className="object-cover"
             />
             {/* icons */}
             <div className="absolute bottom-3 left-26 opacity-0 translate-y-6 pointer-events-none group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 ease-in-out">
