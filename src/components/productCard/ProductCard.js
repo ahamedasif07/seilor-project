@@ -8,7 +8,7 @@ import { PiScales } from "react-icons/pi";
 const ProductCard = ({ product }) => {
   return (
     <div>
-      <div className="bg-white group relative overflow-hidden border-2 ">
+      <div className="bg-white group relative overflow-hidden  ">
         <div className="absolute top-5 right-5 z-40 pointer-events-none group-hover:pointer-events-auto ">
           <button className="text-gray-800 py-2 px-[9px] hover:text-red-600 duration-200 ease-in-out rounded-full hover:bg-white/80  transition">
             <FaRegHeart size={20} />
