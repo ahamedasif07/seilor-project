@@ -8,7 +8,7 @@ import { PiScales } from "react-icons/pi";
 const ProductCard = ({ product }) => {
   return (
     <div>
-      <div className="bg-white group relative overflow-hidden border-2 border-red-500">
+      <div className="bg-white group relative overflow-hidden border-2 ">
         <div className="absolute top-5 right-5 z-40 pointer-events-none group-hover:pointer-events-auto ">
           <button className="text-gray-800 py-2 px-[9px] hover:text-red-600 duration-200 ease-in-out rounded-full hover:bg-white/80  transition">
             <FaRegHeart size={20} />
@@ -16,14 +16,32 @@ const ProductCard = ({ product }) => {
         </div>
         <div className="h-[420px]    overflow-hidden">
           <div className="relative w-full h-[360px]">
-            <Image
-              src={product.image1 ? product.image1 : product.image2}
-              alt={product.title}
-              fill
-              className="object-cover"
-            />
+            <div className="relative w-full h-[360px] overflow-hidden group">
+              {/* Default image (image1) */}
+              <Image
+                src={product.image1}
+                alt={product.title}
+                fill
+                className="object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+              />
+
+              {/* Hover image (image2) */}
+              <Image
+                src={product.image2}
+                alt={product.title}
+                fill
+                className="object-cover opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100"
+              />
+            </div>
+
             {/* icons */}
-            <div className="absolute bottom-3 left-26 opacity-0 translate-y-6 pointer-events-none group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 ease-in-out">
+            <div
+              className="absolute bottom-3 left-1/2 -translate-x-1/2 
+                opacity-0 translate-y-6 pointer-events-none 
+                group-hover:translate-y-0 group-hover:opacity-100 
+                group-hover:pointer-events-auto 
+                transition-all duration-300 ease-in-out"
+            >
               <div className="flex items-center justify-center gap-3 py-2">
                 <button className="text-gray-600 py-2 px-[9px] bg-white/80 hover:text-black transition">
                   <FiShoppingCart size={20} />
