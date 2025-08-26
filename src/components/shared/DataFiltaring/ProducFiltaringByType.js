@@ -2,12 +2,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { DataContext } from "../DataContex";
 import ProductCard from "@/components/productCard/ProductCard";
+import SailorLogo from "@/components/SailorLogo/SailorLogo";
 
 const ProductFiltaringByType = ({ type }) => {
-  const { data } = useContext(DataContext);
+  const { data, loading } = useContext(DataContext);
   const [filtaredData, setFiltaredData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-
   const productsPerPage = 12;
 
   useEffect(() => {
@@ -17,12 +17,9 @@ const ProductFiltaringByType = ({ type }) => {
       (product) => product.type?.toLowerCase() === type.toLowerCase()
     );
     setFiltaredData(filteredNewArrival);
-    setCurrentPage(1); // reset to first page when type changes
-
-    console.log("Filtered Products:", filteredNewArrival);
+    setCurrentPage(1);
   }, [data, type]);
 
-  // Pagination logic
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = filtaredData.slice(
@@ -33,7 +30,13 @@ const ProductFiltaringByType = ({ type }) => {
 
   return (
     <div>
-      {filtaredData.length > 0 ? (
+      {loading ? (
+        <div className="flex justify-center items-center h-screen">
+          <SailorLogo />
+        </div>
+      ) : filtaredData.length === 0 ? (
+        <p>No products found.</p>
+      ) : (
         <>
           {/* Product Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 pb-5">
@@ -43,40 +46,42 @@ const ProductFiltaringByType = ({ type }) => {
           </div>
 
           {/* Pagination */}
-          <div className="flex justify-center gap-2 pb-6">
-            <button
-              onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-              disabled={currentPage === 1}
-              className="px-3 py-1 rounded bg-gray-200 disabled:opacity-50"
-            >
-              Prev
-            </button>
-
-            {Array.from({ length: totalPages }, (_, i) => (
+          {totalPages > 1 && (
+            <div className="flex justify-center gap-2 pb-6">
               <button
-                key={i + 1}
-                onClick={() => setCurrentPage(i + 1)}
-                className={`px-3 py-1 rounded ${
-                  currentPage === i + 1 ? "bg-black text-white" : "bg-gray-200"
-                }`}
+                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                disabled={currentPage === 1}
+                className="px-3 py-1 rounded bg-gray-200 disabled:opacity-50"
               >
-                {i + 1}
+                Prev
               </button>
-            ))}
 
-            <button
-              onClick={() =>
-                setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-              }
-              disabled={currentPage === totalPages}
-              className="px-3 py-1 rounded bg-gray-200 disabled:opacity-50"
-            >
-              Next
-            </button>
-          </div>
+              {Array.from({ length: totalPages }, (_, i) => (
+                <button
+                  key={i + 1}
+                  onClick={() => setCurrentPage(i + 1)}
+                  className={`px-3 py-1 rounded ${
+                    currentPage === i + 1
+                      ? "bg-black text-white"
+                      : "bg-gray-200"
+                  }`}
+                >
+                  {i + 1}
+                </button>
+              ))}
+
+              <button
+                onClick={() =>
+                  setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                }
+                disabled={currentPage === totalPages}
+                className="px-3 py-1 rounded bg-gray-200 disabled:opacity-50"
+              >
+                Next
+              </button>
+            </div>
+          )}
         </>
-      ) : (
-        <p>No products found.</p>
       )}
     </div>
   );

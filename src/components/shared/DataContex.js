@@ -22,6 +22,7 @@ export const DataProvider = ({ children }) => {
       } catch (err) {
         console.error("Fetch error:", err);
       }
+      setLoading(false);
     };
 
     fetchData();

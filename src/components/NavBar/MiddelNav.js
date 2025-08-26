@@ -6,13 +6,16 @@ import { FaPhoneAlt, FaRegHeart } from "react-icons/fa";
 
 import { BsCart4 } from "react-icons/bs";
 import SailorLogo from "../SailorLogo/SailorLogo";
+import Link from "next/link";
 
 const MiddelNav = () => {
   return (
     <div className="lg:block hidden">
       <div className="flex items-center justify-between px-4 md:max-w-screen-lg lg:max-w-screen-xl  mx-auto border-b-[1px] border-gray-200 ">
         <div className="flex items-center gap-[80px] ">
-          <SailorLogo />
+          <Link href="/">
+            <SailorLogo />
+          </Link>
           <div className="flex items-center gap-[60px]">
             {/* Search Bar and Dropdown */}
             <div className="flex items-center  bg-[#F6F7F8] rounded-full w-full max-w-md relative overflow-visible z-[10000]">
