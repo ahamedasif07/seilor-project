@@ -56,7 +56,7 @@ const ProductCard = ({ product }) => {
             </div>
           </div>
           <div className="text-left p-3">
-            <h3 className="text-[14px] font-semibold text-gray-700 uppercase">
+            <h3 className="text-[14px] font-semibold text-gray-600 hover:text-red-600 transform ease-in-out duration-300 uppercase">
               {product.title}
             </h3>
             <p className="text-sm text-gray-600 mt-1 font-bold ">
