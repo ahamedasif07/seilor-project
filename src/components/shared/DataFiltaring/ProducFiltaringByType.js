@@ -31,8 +31,8 @@ const ProductFiltaringByType = ({ type }) => {
   return (
     <div>
       {loading ? (
-        <div className="flex justify-center items-center h-screen">
-          <SailorLogo />
+        <div className="fixed inset-0 flex justify-center items-center bg-white z-50">
+          <SailorLogo className="w-68 h-68" /> {/* width & height increased */}
         </div>
       ) : filtaredData.length === 0 ? (
         <p>No products found.</p>
