@@ -1,6 +1,6 @@
 "use client";
 import Hero from "@/components/hero/Hero";
-import ProductFilteringBySection from "@/components/ProductFiltering]/ProductFilteringBySection";
+
 import { DataContext } from "@/components/shared/DataContex";
 
 import ProductSlider from "@/components/sliders/ProductSlider";

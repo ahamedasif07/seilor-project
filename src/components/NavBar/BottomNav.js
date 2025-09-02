@@ -145,7 +145,9 @@ const BottomNav = () => {
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full md:w-2/4 text-gray-700">
                     <div>
                       <h4 className="mb-2 font-semibold text-left">MEN</h4>
-                      <h4 className="mb-2 font-semibold text-left">PANJABI</h4>
+                      <h4 className="mb-2 font-semibold text-left">
+                        <Link href="/new-arrivle/panjabi">PANJABI</Link>
+                      </h4>
                       <ul className="space-y-1">
                         <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
                           <Link href="/men/panjabi/classic">CLASSIC</Link>

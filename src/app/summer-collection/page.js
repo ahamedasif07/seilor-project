@@ -1,5 +1,6 @@
 import PageSideBar from "@/components/pageSideBar/PageSideBar";
-import ProductFilteringBySection from "@/components/ProductFiltering]/ProductFilteringBySection";
+import ProductFilteringBySection from "@/components/shared/DataFiltaring/ProductFilteringBySection";
+
 import React from "react";
 
 const SummerCollection = () => {

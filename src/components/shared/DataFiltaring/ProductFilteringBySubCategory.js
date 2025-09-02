@@ -1,10 +1,10 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
-import { DataContext } from "../shared/DataContex";
-import SailorLogo from "../SailorLogo/SailorLogo";
-import ProductCard from "../productCard/ProductCard";
+import { DataContext } from "../DataContex";
+import SailorLogo from "@/components/SailorLogo/SailorLogo";
+import ProductCard from "@/components/productCard/ProductCard";
 
-const ProductFilteringBySection = ({ section }) => {
+const ProductFilteringBySubCategory = ({ SubCategory }) => {
   const { data, loading } = useContext(DataContext);
   const [filtaredData, setFiltaredData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -14,11 +14,12 @@ const ProductFilteringBySection = ({ section }) => {
     if (!data || data.length === 0) return;
 
     const filteredNewArrival = data.filter(
-      (product) => product.section?.toLowerCase() === section.toLowerCase()
+      (product) =>
+        product.SubCategory?.toLowerCase() === SubCategory.toLowerCase()
     );
     setFiltaredData(filteredNewArrival);
     setCurrentPage(1);
-  }, [data, section]);
+  }, [data, SubCategory]);
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -91,4 +92,4 @@ const ProductFilteringBySection = ({ section }) => {
   );
 };
 
-export default ProductFilteringBySection;
+export default ProductFilteringBySubCategory;
