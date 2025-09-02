@@ -67,7 +67,7 @@ const BottomNav = () => {
                   <div>
                     <Link href="/summer-collection/men-summer-comfort">
                       <li
-                        className="font-semibold list-none mb-2 text-left cursor-pointer uppercase 
+                        className=" list-none font-semibold mb-2 text-left cursor-pointer uppercase 
                      hover:text-red-600 hover:translate-x-1 transition-transform duration-200"
                       >
                         Men Summer Comfort
@@ -77,7 +77,7 @@ const BottomNav = () => {
                   <div>
                     <Link href="/summer-collection/women-summer-comfort">
                       <li
-                        className="font-semibold list-none mb-2 text-left cursor-pointer uppercase 
+                        className=" list-none mb-2 font-semibold text-left cursor-pointer uppercase 
                      hover:text-red-600 hover:translate-x-1 transition-transform duration-200"
                       >
                         Women Summer Comfort
@@ -114,23 +114,22 @@ const BottomNav = () => {
           {/* summer collection dropdowen end */}
 
           {/* new araivle   dropdowen start */}
-          <div className="relative group   text-center cursor-pointer transition-all duration-200  border-orange-400 hover:border-[#91d36b]  text-white group">
+          <div className="relative group text-center cursor-pointer transition-all duration-200 border-orange-400 hover:border-[#91d36b] text-white">
             {/* Trigger */}
             <div className="relative group">
-              {/* Trigger */}
               <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer">
                 NEW ARRIVAL/25
               </h3>
 
               {/* Dropdown */}
               <div
-                className={`absolute left-58  transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2  rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
-    duration-300 flex flex-col items-start 
-    opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
+                className={`absolute left-58 transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2 rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
+          duration-300 flex flex-col items-start 
+          opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
               >
                 <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
                   {/* Left image */}
-                  <div className="w-full   md:w-1/4 shrink-0">
+                  <div className="w-full md:w-1/4 shrink-0">
                     <div className="relative w-2/3 h-[300px] lg:h-[400px]">
                       <Image
                         src={newAraivleDpImgOne}
@@ -143,100 +142,165 @@ const BottomNav = () => {
                   </div>
 
                   {/* Grid content */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full md:w-2/4 text-gray-700">
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">MEN</h4>
-                      {/* panjabi */}
-                      <h4 className="font-semibold mb-2 text-left">PANJABI</h4>
+                      <h4 className="mb-2 font-semibold text-left">MEN</h4>
+                      <h4 className="mb-2 font-semibold text-left">PANJABI</h4>
                       <ul className="space-y-1">
-                        <li className="text-left text-[12px]">CLASSIC</li>
-                        <li className="text-left text-[12px]">FUSION</li>
-                        <li className="text-left text-[12px]">KABLI SUIT</li>
-                      </ul>
-                      {/* shirts */}
-                      <h4 className="font-semibold my-2 text-left">SHIRT</h4>
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">
-                          BUSINESS FORMAL SHIRT
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/men/panjabi/classic">CLASSIC</Link>
                         </li>
-                        <li className="text-left text-[12px]">
-                          EXECUTIVE FORMAL SHIRT
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/men/panjabi/fusion">FUSION</Link>
                         </li>
-                        <li className="text-left text-[12px]">
-                          FASHION EXPRESS SHIRT
-                        </li>
-                        <li className="text-left text-[12px]">
-                          KNIT DRESS SHIRT
-                        </li>
-                        <li className="text-left text-[12px]">
-                          SMART CASUAL SHIRT
-                        </li>
-                        <li className="text-left text-[12px]">CASUAL SHIRT</li>
-                        <li className="text-left text-[12px]">
-                          CASUAL SHIRT (H/S)
-                        </li>
-                        <li className="text-left text-[12px]">
-                          KNIT CASUAL SHIRT (H/S)
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/men/panjabi/kabli-suit">KABLI SUIT</Link>
                         </li>
                       </ul>
-                      {/* polos */}
-                      <h4 className="font-semibold mb-2 text-left">POLOS</h4>
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">
-                          KNIT BASIC POLO
-                        </li>
-                        <li className="text-left text-[12px]">
-                          KNIT FASHION POLO
-                        </li>
 
-                        <li className="text-left text-[12px]">KABLI SUIT</li>
+                      <h4 className="my-2 font-semibold text-left">SHIRT</h4>
+                      <ul className="space-y-1">
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/men/shirt/business-formal-shirt">
+                            BUSINESS FORMAL SHIRT
+                          </Link>
+                        </li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/men/shirt/executive-formal-shirt">
+                            EXECUTIVE FORMAL SHIRT
+                          </Link>
+                        </li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/men/shirt/fashion-express-shirt">
+                            FASHION EXPRESS SHIRT
+                          </Link>
+                        </li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/men/shirt/knit-dress-shirt">
+                            KNIT DRESS SHIRT
+                          </Link>
+                        </li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/men/shirt/smart-casual-shirt">
+                            SMART CASUAL SHIRT
+                          </Link>
+                        </li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/men/shirt/casual-shirt">
+                            CASUAL SHIRT
+                          </Link>
+                        </li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/men/shirt/casual-shirt-hs">
+                            CASUAL SHIRT (H/S)
+                          </Link>
+                        </li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/men/shirt/knit-casual-shirt-hs">
+                            KNIT CASUAL SHIRT (H/S)
+                          </Link>
+                        </li>
+                      </ul>
+
+                      <h4 className="mb-2 font-semibold text-left">POLOS</h4>
+                      <ul className="space-y-1">
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/men/polos/knit-basic-polo">
+                            KNIT BASIC POLO
+                          </Link>
+                        </li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/men/polos/knit-fashion-polo">
+                            KNIT FASHION POLO
+                          </Link>
+                        </li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/men/polos/kabli-suit">KABLI SUIT</Link>
+                        </li>
                       </ul>
                     </div>
+
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">WOMEN</h4>
+                      <h4 className="mb-2 font-semibold text-left">WOMEN</h4>
                       <ul className="space-y-1">
-                        <li className="text-left text-[12px]">KURTI</li>
-                        <li className="text-left text-[12px]">LONG KURTI</li>
-                        <li className="text-left text-[12px]">SALWAR SUIT</li>
-                        <li className="text-left text-[12px]">GOWN</li>
-                        <li className="text-left text-[12px]">2 PCE</li>
-                        <li className="text-left text-[12px]">LONG TOP</li>
-                        <li className="text-left text-[12px]">SHORT TOP</li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/women/kurti">KURTI</Link>
+                        </li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/women/long-kurti">LONG KURTI</Link>
+                        </li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/women/salwar-suit">SALWAR SUIT</Link>
+                        </li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/women/gown">GOWN</Link>
+                        </li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/women/2-pce">2 PCE</Link>
+                        </li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/women/long-top">LONG TOP</Link>
+                        </li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/women/short-top">SHORT TOP</Link>
+                        </li>
                       </ul>
                     </div>
+
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">FOOTWEAR</h4>
+                      <h4 className="mb-2 font-semibold text-left">FOOTWEAR</h4>
                       <ul className="space-y-1">
-                        <li className="text-left text-[12px]">CASUAL SHOE</li>
-                        <li className="text-left text-[12px]">
-                          FASHION LOAFER
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/footwear/casual-shoe">CASUAL SHOE</Link>
                         </li>
-                        <li className="text-left text-[12px]">SANDAL</li>
-                        <li className="text-left text-[12px]">
-                          FASHION SNEAKER
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/footwear/fashion-loafer">
+                            FASHION LOAFER
+                          </Link>
                         </li>
-                        <li className="text-left text-[12px]">FORMAL SHOE</li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/footwear/sandal">SANDAL</Link>
+                        </li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/footwear/fashion-sneaker">
+                            FASHION SNEAKER
+                          </Link>
+                        </li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/footwear/formal-shoe">FORMAL SHOE</Link>
+                        </li>
                       </ul>
                     </div>
+
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">KIDS</h4>
+                      <h4 className="mb-2 font-semibold text-left">KIDS</h4>
                       <ul className="space-y-1">
-                        <li className="font-semibold mb-2 text-left">
-                          NEWBORN
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/kids/newborn">NEWBORN</Link>
                         </li>
-                        <li className="font-semibold mb-2 text-left">
-                          BOY'S COLLECTION
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/kids/boys-collection">
+                            BOY'S COLLECTION
+                          </Link>
                         </li>
-                        <li className="font-semibold mb-2 text-left">
-                          NEWBORN BOY'S COLLECTION
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/kids/newborn-boys-collection">
+                            NEWBORN BOY'S COLLECTION
+                          </Link>
                         </li>
-                        <li className="font-semibold mb-2 text-left">
-                          GIRL'S COLLECTION
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/kids/girls-collection">
+                            GIRL'S COLLECTION
+                          </Link>
                         </li>
-                        <li className="font-semibold mb-2 text-left">
-                          NEWBORN GIRL'S COLLECTION
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/kids/newborn-girls-collection">
+                            NEWBORN GIRL'S COLLECTION
+                          </Link>
                         </li>
-                        <li className="font-semibold mb-2 text-left">KID'S</li>
+                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
+                          <Link href="/kids/kids">KID'S</Link>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -252,7 +316,7 @@ const BottomNav = () => {
                         priority
                       />
                     </div>
-                    <div className="relative w-1/2 h-[200px]  lg:h-[300px]">
+                    <div className="relative w-1/2 h-[200px] lg:h-[300px]">
                       <Image
                         src={newAraivleDpImgTheree}
                         alt="Right 2"
@@ -266,6 +330,7 @@ const BottomNav = () => {
               </div>
             </div>
           </div>
+
           {/* new araivle   dropdowen end */}
 
           {/* mens start dropdowen start*/}
@@ -300,11 +365,9 @@ const BottomNav = () => {
                   {/* Grid content */}
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">
-                        ACTIVE WEAR
-                      </h4>
+                      <h4 className=" mb-2 text-left">ACTIVE WEAR</h4>
                       {/* shirts */}
-                      <h4 className="font-semibold my-2 text-left">SHIRT</h4>
+                      <h4 className=" my-2 text-left">SHIRT</h4>
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">
                           BUSINESS FORMAL SHIRT
@@ -330,7 +393,7 @@ const BottomNav = () => {
                         </li>
                       </ul>
                       {/* panjabi */}
-                      <h4 className="font-semibold my-2 text-left">PANJABI</h4>
+                      <h4 className=" my-2 text-left">PANJABI</h4>
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">CLASSIC</li>
                         <li className="text-left text-[12px]">FUSION</li>
@@ -338,11 +401,9 @@ const BottomNav = () => {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">
-                        FASTIVE SPORT LIGHT
-                      </h4>
+                      <h4 className=" mb-2 text-left">FASTIVE SPORT LIGHT</h4>
                       {/* polos */}
-                      <h4 className="font-semibold mb-2 text-left">POLOS</h4>
+                      <h4 className=" mb-2 text-left">POLOS</h4>
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">
                           KNIT BASIC POLO
@@ -354,7 +415,7 @@ const BottomNav = () => {
                         <li className="text-left text-[12px]">KABLI SUIT</li>
                       </ul>
                       {/* t-SHIRTS */}
-                      <h4 className="font-semibold my-2 text-left">T-SHIRTS</h4>
+                      <h4 className=" my-2 text-left">T-SHIRTS</h4>
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">
                           SPORT T-SHIRTS
@@ -365,7 +426,7 @@ const BottomNav = () => {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">BOOTOM</h4>
+                      <h4 className=" mb-2 text-left">BOOTOM</h4>
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">CHINO TROUSER</li>
                         <li className="text-left text-[12px]">DENIM TROUSER</li>
@@ -433,9 +494,9 @@ const BottomNav = () => {
                   {/* Grid content */}
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">TOP</h4>
+                      <h4 className=" mb-2 text-left">TOP</h4>
                       {/* shirts */}
-                      <h4 className="font-semibold my-2 text-left">SHIRT</h4>
+                      <h4 className=" my-2 text-left">SHIRT</h4>
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">CROP TOP</li>
                         <li className="text-left text-[12px]">SHORT TOP</li>
@@ -443,16 +504,14 @@ const BottomNav = () => {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">KAFTAN</h4>
+                      <h4 className=" mb-2 text-left">KAFTAN</h4>
                       {/* polos */}
-                      <h4 className="font-semibold mb-2 text-left">2 PEC</h4>
-                      <h4 className="font-semibold mb-2 text-left">SHIRT</h4>
-                      <h4 className="font-semibold mb-2 text-left">
-                        SALOWER SUIT
-                      </h4>
+                      <h4 className=" mb-2 text-left">2 PEC</h4>
+                      <h4 className=" mb-2 text-left">SHIRT</h4>
+                      <h4 className=" mb-2 text-left">SALOWER SUIT</h4>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">BOOTOM</h4>
+                      <h4 className=" mb-2 text-left">BOOTOM</h4>
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">SKIRT</li>
                       </ul>
@@ -518,9 +577,7 @@ const BottomNav = () => {
                   {/* Grid content */}
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">
-                        BOY'S SET
-                      </h4>
+                      <h4 className=" mb-2 text-left">BOY'S SET</h4>
                       {/* BOY'S set */}
 
                       <ul className="space-y-1">
@@ -531,9 +588,7 @@ const BottomNav = () => {
                           BOY'S KABLI SUIT
                         </li>
                       </ul>
-                      <h4 className="font-semibold mb-2 text-left">
-                        BOY'S TOP
-                      </h4>
+                      <h4 className=" mb-2 text-left">BOY'S TOP</h4>
                       {/* BOY'S TOP */}
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">BOY'S PANJABI</li>
@@ -551,9 +606,7 @@ const BottomNav = () => {
                     <div></div>
                     <div>
                       {/* girls sets */}
-                      <h4 className="font-semibold mb-2 text-left">
-                        GIRL'S SET
-                      </h4>
+                      <h4 className=" mb-2 text-left">GIRL'S SET</h4>
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">
                           GIRL'S TOP WITH SKIRT
@@ -567,9 +620,7 @@ const BottomNav = () => {
                         <li className="text-left text-[12px]">GIRL'S 2 PCS</li>
                       </ul>
                       {/* girls tops */}
-                      <h4 className="font-semibold mb-2 text-left">
-                        GIRL'S SET
-                      </h4>
+                      <h4 className=" mb-2 text-left">GIRL'S SET</h4>
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">
                           GIRL'S T-SHIRT
@@ -643,9 +694,7 @@ const BottomNav = () => {
                   {/* Grid content */}
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">
-                        NEWBORN BOY'S TOP
-                      </h4>
+                      <h4 className=" mb-2 text-left">NEWBORN BOY'S TOP</h4>
                       {/* NEWBORN BOY'S TOP */}
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">
@@ -655,9 +704,7 @@ const BottomNav = () => {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">
-                        NEWBORN BOY'S BOTTOM
-                      </h4>
+                      <h4 className=" mb-2 text-left">NEWBORN BOY'S BOTTOM</h4>
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">
                           NB BOY'S SHORT PANT
@@ -665,9 +712,7 @@ const BottomNav = () => {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">
-                        NEWBORN GIRL'S SET
-                      </h4>
+                      <h4 className=" mb-2 text-left">NEWBORN GIRL'S SET</h4>
                       {/* NEWBORN GIRL'S SET */}
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">
@@ -677,9 +722,7 @@ const BottomNav = () => {
                           NB GIRLS TOP BOTTOM
                         </li>
                       </ul>
-                      <h4 className="font-semibold mb-2 text-left">
-                        NEWBORN GIRL'S TOP
-                      </h4>
+                      <h4 className=" mb-2 text-left">NEWBORN GIRL'S TOP</h4>
                       {/* NEWBORN GIRL'S TOP */}
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">
@@ -695,9 +738,7 @@ const BottomNav = () => {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">
-                        NEWBORN GIRL'S BOTTOM
-                      </h4>
+                      <h4 className=" mb-2 text-left">NEWBORN GIRL'S BOTTOM</h4>
                     </div>
                   </div>
 
@@ -733,7 +774,7 @@ const BottomNav = () => {
             {/* Trigger */}
             <div className="relative group">
               {/* Trigger */}
-              <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer">
+              <h3 className="text-[15px] font-semibold  text-gray-700 cursor-pointer">
                 FOOTWEAR
               </h3>
 
@@ -760,9 +801,7 @@ const BottomNav = () => {
                   {/* Grid content */}
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">
-                        MEN'S FOOTWEAR
-                      </h4>
+                      <h4 className=" mb-2 text-left">MEN'S FOOTWEAR</h4>
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">
                           MEN'S HIGH ANKLE BOOT
@@ -782,9 +821,7 @@ const BottomNav = () => {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">
-                        WOMEN'S FOOTWEAR
-                      </h4>
+                      <h4 className=" mb-2 text-left">WOMEN'S FOOTWEAR</h4>
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">
                           BLOCK HEEL SLIDE SANDAL
@@ -802,15 +839,11 @@ const BottomNav = () => {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">
-                        BOY'S FOOTWEAR
-                      </h4>
+                      <h4 className=" mb-2 text-left">BOY'S FOOTWEAR</h4>
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">BOY'S SNEAKER</li>
                       </ul>
-                      <h4 className="font-semibold mb-2 text-left">
-                        GIRL'S FOOTWEAR
-                      </h4>
+                      <h4 className=" mb-2 text-left">GIRL'S FOOTWEAR</h4>
                       <ul className="space-y-1">
                         <li className="text-left text-[12px]">
                           GIRL'S SNEAKER
@@ -818,9 +851,7 @@ const BottomNav = () => {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-2 text-left">
-                        NEWBORN GIRL'S BOTTOM
-                      </h4>
+                      <h4 className=" mb-2 text-left">NEWBORN GIRL'S BOTTOM</h4>
                     </div>
                   </div>
 
@@ -854,7 +885,7 @@ const BottomNav = () => {
           {/* ACCESSORIES start */}
           <div className="relative group">
             {/* Trigger */}
-            <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer">
+            <h3 className="text-[15px] font-semibold  text-gray-700 cursor-pointer">
               ACCESSORIES
             </h3>
             {/* Dropdown */}
@@ -881,7 +912,7 @@ const BottomNav = () => {
                 {/* Grid content */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
                   <div>
-                    <h4 className="font-semibold mb-2 text-left">MEN'sS BAG</h4>
+                    <h4 className=" mb-2 text-left">MEN'sS BAG</h4>
                     <ul className="space-y-1">
                       <li className="text-left text-[12px]">POUCH BAG</li>
                       <li className="text-left text-[12px]">
@@ -890,9 +921,7 @@ const BottomNav = () => {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2 text-left">
-                      WOMEN'S BAG
-                    </h4>
+                    <h4 className=" mb-2 text-left">WOMEN'S BAG</h4>
                     <ul className="space-y-1">
                       <li className="text-left text-[12px]">PARTY BAG</li>
                       <li className="text-left text-[12px]">SHOLDER BAG</li>
