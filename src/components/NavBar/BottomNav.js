@@ -65,7 +65,7 @@ const BottomNav = () => {
                 {/* Grid content */}
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
                   <div>
-                    <Link href="/men-summer-comfort">
+                    <Link href="/summer-collection/men-summer-comfort">
                       <li
                         className="font-semibold list-none mb-2 text-left cursor-pointer uppercase 
                      hover:text-red-600 hover:translate-x-1 transition-transform duration-200"
@@ -75,7 +75,7 @@ const BottomNav = () => {
                     </Link>
                   </div>
                   <div>
-                    <Link href="/women-summer-comfort">
+                    <Link href="/summer-collection/women-summer-comfort">
                       <li
                         className="font-semibold list-none mb-2 text-left cursor-pointer uppercase 
                      hover:text-red-600 hover:translate-x-1 transition-transform duration-200"
