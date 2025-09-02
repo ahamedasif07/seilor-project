@@ -4,7 +4,7 @@ import { DataContext } from "../DataContex";
 import SailorLogo from "@/components/SailorLogo/SailorLogo";
 import ProductCard from "@/components/productCard/ProductCard";
 
-const ProductFilteringBySubCategory = ({ SubCategory }) => {
+const ProductFilteringBySubCategory = ({ subcategory }) => {
   const { data, loading } = useContext(DataContext);
   const [filtaredData, setFiltaredData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -15,11 +15,11 @@ const ProductFilteringBySubCategory = ({ SubCategory }) => {
 
     const filteredNewArrival = data.filter(
       (product) =>
-        product.SubCategory?.toLowerCase() === SubCategory.toLowerCase()
+        product.subcategory?.toLowerCase() === subcategory?.toLowerCase()
     );
     setFiltaredData(filteredNewArrival);
     setCurrentPage(1);
-  }, [data, SubCategory]);
+  }, [data, subcategory]);
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
