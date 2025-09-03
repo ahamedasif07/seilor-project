@@ -117,9 +117,11 @@ const BottomNav = () => {
           <div className="relative group text-center cursor-pointer transition-all duration-200 border-orange-400 hover:border-[#91d36b] text-white">
             {/* Trigger */}
             <div className="relative group">
-              <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer">
-                NEW ARRIVAL/25
-              </h3>
+              <Link href="/new-arrivle">
+                <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer">
+                  NEW ARRIVAL/25
+                </h3>
+              </Link>
 
               {/* Dropdown */}
               <div
