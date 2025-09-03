@@ -6,7 +6,7 @@ const Classic = () => {
   return (
     <div>
       <PageSideBar category=" Panjabi">
-        <ProductFilteringBySubCategory subcategory="Classy" />
+        <ProductFilteringBySubCategory subCategory="Classy" />
       </PageSideBar>
     </div>
   );
