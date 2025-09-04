@@ -174,7 +174,7 @@ const BottomNav = () => {
                           </Link>
                         </li>
                         <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/men/shirt/executive-formal-shirt">
+                          <Link href="/new-arrivle/shirt/executive-formal-shirt">
                             EXECUTIVE FORMAL SHIRT
                           </Link>
                         </li>
