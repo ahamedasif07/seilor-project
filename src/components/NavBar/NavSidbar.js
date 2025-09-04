@@ -72,13 +72,22 @@ export default function SidebarMenu({ isOpen, setIsOpen }) {
           </div>
           {open.summer && (
             <div className={submenuClass}>
-              <Link href="/" className="hover:text-black block">
+              <Link
+                href="/summer-collection/women-summer-comfort"
+                className="hover:text-black block"
+              >
                 Women's Summer Comfort
               </Link>
-              <Link href="/" className="hover:text-black block">
+              <Link
+                href="/summer-collection/men-summer-comfort"
+                className="hover:text-black block"
+              >
                 Men's Summer Comfort
               </Link>
-              <Link href="/" className="hover:text-black block">
+              <Link
+                href="/summer-collection"
+                className="hover:text-black block"
+              >
                 ALL SUMMER COLLECTION
               </Link>
             </div>
