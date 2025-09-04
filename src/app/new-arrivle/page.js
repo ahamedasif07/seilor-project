@@ -4,7 +4,7 @@ import ProductFilteringBySection from "@/components/shared/DataFiltaring/Product
 import { categoryMeta } from "@/components/shared/metadata/MetaData";
 import React from "react";
 export async function generateMetadata() {
-  const category = categoryMeta["Panjabi"];
+  const category = categoryMeta["NewArrival"];
 
   return {
     title: `Shop | ${category.title}  | Sailor`,
