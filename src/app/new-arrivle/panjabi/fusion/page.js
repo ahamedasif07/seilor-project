@@ -1,5 +1,6 @@
 import PageSideBar from "@/components/pageSideBar/PageSideBar";
 import ProductFilteringBySubCategory from "@/components/shared/DataFiltaring/ProductFilteringBySubCategory";
+import { categoryMeta } from "@/components/shared/metadata/MetaData";
 import React from "react";
 export async function generateMetadata() {
   const category = categoryMeta["FashionPanjabi"];

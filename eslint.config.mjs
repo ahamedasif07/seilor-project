@@ -1,12 +1,6 @@
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals"),
-  {
-    rules: {
-      "no-unused-vars": "warn",
-      "react/no-unescaped-entities": "off",
-      "@next/next/no-img-element": "off",
-    },
-  },
-];
+// eslint.config.mjs or eslint.config.js
 
-export default eslintConfig;
+import js from "@eslint/js";
+import next from "@next/eslint-plugin-next";
+
+export default [js.configs.recommended, next.configs["core-web-vitals"]];
