@@ -67,7 +67,7 @@ export default function SidebarMenu({ isOpen, setIsOpen }) {
               open.summer ? activeClass : "text-gray-800"
             }`}
           >
-            <span>SUMMER COLLECTION</span>
+            <span> SUMMER COLLECTION</span>
             {open.summer ? <FaMinus /> : <FaPlus />}
           </div>
           {open.summer && (
@@ -103,7 +103,9 @@ export default function SidebarMenu({ isOpen, setIsOpen }) {
               open.newArrival ? activeClass : "text-gray-800"
             }`}
           >
-            <span>NEW ARRIVAL</span>
+            <Link href="/new-arrivle">
+              <h3>NEW ARRIVAL/25</h3>
+            </Link>
             {open.newArrival ? <FaMinus /> : <FaPlus />}
           </div>
           {open.newArrival && (
