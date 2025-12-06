@@ -176,10 +176,16 @@ export default function SidebarMenu({ isOpen, setIsOpen }) {
                       >
                         CASUAL SHIRT
                       </Link>
-                      <Link href="/" className="hover:text-black block">
+                      <Link
+                        href="/men/shirt/casual-shirt-hs"
+                        className="hover:text-black block"
+                      >
                         CASUAL SHIRT (H/S)
                       </Link>
-                      <Link href="/" className="hover:text-black block">
+                      <Link
+                        href="/men/shirt/knit-casual-shirt-hs"
+                        className="hover:text-black block"
+                      >
                         KNIT CASUAL SHIRT (H/S)
                       </Link>
                     </div>
