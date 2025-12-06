@@ -130,7 +130,8 @@ export default function SidebarMenu({ isOpen, setIsOpen }) {
                     className={subitemClass}
                     onClick={() => toggle("menShirt")}
                   >
-                    SHIRT{" "}
+                    <Link href="/new-arrivle/panjabi/shirt">SHIRT</Link>
+
                     {open.menShirt ? (
                       <FaMinus className="text-xs" />
                     ) : (
@@ -139,22 +140,40 @@ export default function SidebarMenu({ isOpen, setIsOpen }) {
                   </div>
                   {open.menShirt && (
                     <div className="pl-4 space-y-1">
-                      <Link href="/" className="hover:text-black block">
+                      <Link
+                        href="/new-arrivle/shirt/business-formal-shirt"
+                        className="hover:text-black block"
+                      >
                         BUSINESS FORMAL SHIRT
                       </Link>
-                      <Link href="/" className="hover:text-black block">
+                      <Link
+                        href="/new-arrivle/shirt/executive-formal-shirt"
+                        className="hover:text-black block"
+                      >
                         EXECUTIVE FORMAL SHIRT
                       </Link>
-                      <Link href="/" className="hover:text-black block">
+                      <Link
+                        href="/new-arrivle/shirt/fashion-express-shirt"
+                        className="hover:text-black block"
+                      >
                         FASHION EXPRESS SHIRT
                       </Link>
-                      <Link href="/" className="hover:text-black block">
+                      <Link
+                        href="/new-arrivle/shirt/knit-dress-shirt"
+                        className="hover:text-black block"
+                      >
                         KNIT DRESS SHIRT
                       </Link>
-                      <Link href="/" className="hover:text-black block">
+                      <Link
+                        href="/men/shirt/smart-casual-shirt"
+                        className="hover:text-black block"
+                      >
                         SMART CASUAL SHIRT
                       </Link>
-                      <Link href="/" className="hover:text-black block">
+                      <Link
+                        href="/men/shirt/casual-shirt"
+                        className="hover:text-black block"
+                      >
                         CASUAL SHIRT
                       </Link>
                       <Link href="/" className="hover:text-black block">

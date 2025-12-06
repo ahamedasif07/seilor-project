@@ -165,8 +165,10 @@ const BottomNav = () => {
                           </Link>
                         </li>
                       </ul>
+                      <Link href="/new-arrivle/panjabi/shirt">
+                        <h4 className="my-2 font-semibold text-left">SHIRT</h4>
+                      </Link>
 
-                      <h4 className="my-2 font-semibold text-left">SHIRT</h4>
                       <ul className="space-y-1">
                         <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
                           <Link href="/new-arrivle/shirt/business-formal-shirt">
