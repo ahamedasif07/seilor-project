@@ -1,4 +1,6 @@
 "use client";
+// navigationData.js - All navigation menu items in structured format
+
 import newAraivleDpImgOne from "../../../public/images/project-sailor-home-page008.jpg";
 import newAraivleDpImgTow from "../../../public/images/project-sailor-home-page010.jpg";
 import newAraivleDpImgTheree from "../../../public/images/project-sailor-home-page011.jpg";
@@ -28,113 +30,573 @@ import Image from "next/image";
 import Link from "next/link";
 
 const BottomNav = () => {
+  const navigationData = [
+    {
+      id: 1,
+      title: "Summer Collection/25",
+      link: "/summer-collection",
+      dropdownClass: "left-108",
+      images: {
+        left: summweDpimgOne,
+        rightImages: [summweDpimgTwo, summweDpimgTheree],
+      },
+      columns: [
+        {
+          items: [
+            {
+              title: "Men Summer Comfort",
+              link: "/summer-collection/men-summer-comfort",
+              isBold: true,
+            },
+          ],
+        },
+        {
+          items: [
+            {
+              title: "Women Summer Comfort",
+              link: "/summer-collection/women-summer-comfort",
+              isBold: true,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 2,
+      title: "NEW ARRIVAL/25",
+      link: "/new-arrivle",
+      dropdownClass: "left-58",
+      images: {
+        left: newAraivleDpImgOne,
+        rightImages: [newAraivleDpImgTow, newAraivleDpImgTheree],
+      },
+      gridCols: 4,
+      columns: [
+        {
+          category: "MEN",
+          sections: [
+            {
+              title: "PANJABI",
+              link: "/new-arrivle/panjabi",
+              items: [
+                { title: "CLASSIC", link: "/new-arrivle/panjabi/classic" },
+                { title: "FUSION", link: "/new-arrivle/panjabi/fusion" },
+                {
+                  title: "KABLI SUIT",
+                  link: "/new-arrivle/panjabi/kabli-suit",
+                },
+              ],
+            },
+            {
+              title: "SHIRT",
+              link: "/new-arrivle/panjabi/shirt",
+              items: [
+                {
+                  title: "BUSINESS FORMAL SHIRT",
+                  link: "/new-arrivle/shirt/business-formal-shirt",
+                },
+                {
+                  title: "EXECUTIVE FORMAL SHIRT",
+                  link: "/new-arrivle/shirt/executive-formal-shirt",
+                },
+                {
+                  title: "FASHION EXPRESS SHIRT",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "KNIT DRESS SHIRT",
+                  link: "/new-arrivle/shirt/knit-dress-shirt",
+                },
+                {
+                  title: "SMART CASUAL SHIRT",
+                  link: "/men/shirt/smart-casual-shirt",
+                },
+                { title: "CASUAL SHIRT", link: "/men/shirt/casual-shirt" },
+                {
+                  title: "CASUAL SHIRT (H/S)",
+                  link: "/men/shirt/casual-shirt-hs",
+                },
+                {
+                  title: "KNIT CASUAL SHIRT (H/S)",
+                  link: "/men/shirt/knit-casual-shirt-hs",
+                },
+              ],
+            },
+            {
+              title: "POLOS",
+              items: [
+                {
+                  title: "KNIT BASIC POLO",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "KNIT FASHION POLO",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "KABLI SUIT",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "WOMEN",
+          sections: [
+            {
+              items: [
+                {
+                  title: "KURTI",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "LONG KURTI",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "SALWAR SUIT",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "GOWN",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "2 PCE",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "LONG TOP",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "SHORT TOP",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "FOOTWEAR",
+          sections: [
+            {
+              items: [
+                {
+                  title: "CASUAL SHOE",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "FASHION LOAFER",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "SANDAL",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "FASHION SNEAKER",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "FORMAL SHOE",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          category: "KIDS",
+          sections: [
+            {
+              items: [
+                {
+                  title: "NEWBORN",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "BOY'S COLLECTION",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "NEWBORN BOY'S COLLECTION",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "GIRL'S COLLECTION",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "NEWBORN GIRL'S COLLECTION",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+                {
+                  title: "KID'S",
+                  link: "/new-arrivle/shirt/fashion-express-shirt",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 3,
+      title: "MEN'S",
+      link: "/men",
+      dropdownClass: "left-22",
+      images: {
+        left: menDpImgOne,
+        rightImages: [menDpImgTwo, menDpImgTheree],
+      },
+      columns: [
+        {
+          sections: [
+            {
+              title: "ACTIVE WEAR",
+            },
+            {
+              title: "SHIRT",
+              items: [
+                { title: "BUSINESS FORMAL SHIRT" },
+                { title: "EXECUTIVE FORMAL SHIRT" },
+                { title: "FASHION EXPRESS SHIRT" },
+                { title: "KNIT DRESS SHIRT" },
+                { title: "SMART CASUAL SHIRT" },
+                { title: "CASUAL SHIRT" },
+                { title: "CASUAL SHIRT (H/S)" },
+                { title: "KNIT CASUAL SHIRT (H/S)" },
+              ],
+            },
+            {
+              title: "PANJABI",
+              items: [
+                { title: "CLASSIC" },
+                { title: "FUSION" },
+                { title: "KABLI SUIT" },
+              ],
+            },
+          ],
+        },
+        {
+          sections: [
+            {
+              title: "FASTIVE SPORT LIGHT",
+            },
+            {
+              title: "POLOS",
+              items: [
+                { title: "KNIT BASIC POLO" },
+                { title: "KNIT FASHION POLO" },
+                { title: "KABLI SUIT" },
+              ],
+            },
+            {
+              title: "T-SHIRTS",
+              items: [
+                { title: "SPORT T-SHIRTS" },
+                { title: "REGLURE T-SHIRTS" },
+              ],
+            },
+          ],
+        },
+        {
+          sections: [
+            {
+              title: "BOOTOM",
+              items: [
+                { title: "CHINO TROUSER" },
+                { title: "DENIM TROUSER" },
+                { title: "SANDAL" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 4,
+      title: "WOMEN'S",
+      link: "/women",
+      dropdownClass: "left-5",
+      images: {
+        left: womenDpImgOne,
+        rightImages: [womenDpImgTwo, womenDpImgTheree],
+      },
+      columns: [
+        {
+          sections: [
+            {
+              title: "TOP",
+            },
+            {
+              title: "SHIRT",
+              items: [
+                { title: "CROP TOP" },
+                { title: "SHORT TOP" },
+                { title: "LONG TOP" },
+              ],
+            },
+          ],
+        },
+        {
+          sections: [
+            { title: "KAFTAN" },
+            { title: "2 PEC" },
+            { title: "SHIRT" },
+            { title: "SALOWER SUIT" },
+          ],
+        },
+        {
+          sections: [
+            {
+              title: "BOOTOM",
+              items: [{ title: "SKIRT" }],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 5,
+      title: "KID'S",
+      link: "/kids",
+      dropdownClass: "-left-19",
+      images: {
+        left: kisDpImgOne,
+        rightImages: [kidDpImgTwo, kidDpImgTheree],
+      },
+      columns: [
+        {
+          sections: [
+            {
+              title: "BOY'S SET",
+              items: [
+                { title: "BOY'S PREMIUM PANJABI SET" },
+                { title: "BOY'S KABLI SUIT" },
+              ],
+            },
+            {
+              title: "BOY'S TOP",
+              items: [
+                { title: "BOY'S PANJABI" },
+                { title: "BOY'S TWIN TOP" },
+                { title: "BOY'S CASUAL SHIRT" },
+                { title: "BOY'S T-SHIRT" },
+                { title: "BOY'S HENLEY" },
+                { title: "BOY'S POLO" },
+              ],
+            },
+          ],
+        },
+        {
+          sections: [],
+        },
+        {
+          sections: [
+            {
+              title: "GIRL'S SET",
+              items: [
+                { title: "GIRL'S TOP WITH SKIRT" },
+                { title: "GIRL'S TOP BOTTOM" },
+                { title: "GIRL'S SALWAR SUIT" },
+                { title: "GIRL'S 2 PCS" },
+              ],
+            },
+            {
+              title: "GIRL'S SET",
+              items: [
+                { title: "GIRL'S T-SHIRT" },
+                { title: "GIRL'S PARTY DRESS" },
+                { title: "GIRL'S KURTI" },
+                { title: "GIRL'S TOPS" },
+                { title: "GIRL'S FROCK" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 6,
+      title: "NEWBRON",
+      link: "/newborn",
+      dropdownClass: "-left-35",
+      images: {
+        left: newbronDpImgOne,
+        rightImages: [newbronDpImgTwo, newbronDpImgTheree],
+      },
+      gridCols: 4,
+      columns: [
+        {
+          sections: [
+            {
+              title: "NEWBORN BOY'S TOP",
+              items: [
+                { title: "NB BOY'S CASUAL SHIRT" },
+                { title: "NB BOY'S NIMA" },
+              ],
+            },
+          ],
+        },
+        {
+          sections: [
+            {
+              title: "NEWBORN BOY'S BOTTOM",
+              items: [{ title: "NB BOY'S SHORT PANT" }],
+            },
+          ],
+        },
+        {
+          sections: [
+            {
+              title: "NEWBORN GIRL'S SET",
+              items: [
+                { title: "NB GIRLS SALWAR SUIT" },
+                { title: "NB GIRLS TOP BOTTOM" },
+              ],
+            },
+            {
+              title: "NEWBORN GIRL'S TOP",
+              items: [
+                { title: "NB GIRLS FROCK" },
+                { title: "NB GIRLS PARTY DRESS" },
+                { title: "NB GIRLS NIMA" },
+                { title: "NB GIRLS T-SHIRT" },
+              ],
+            },
+          ],
+        },
+        {
+          sections: [
+            {
+              title: "NEWBORN GIRL'S BOTTOM",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 7,
+      title: "FOOTWEAR",
+      link: "/footwear",
+      dropdownClass: "-left-59",
+      images: {
+        left: footwareDpImgOne,
+        rightImages: [footwareDpImgTwo, footwareDpImgTheree],
+      },
+      gridCols: 4,
+      columns: [
+        {
+          sections: [
+            {
+              title: "MEN'S FOOTWEAR",
+              items: [
+                { title: "MEN'S HIGH ANKLE BOOT" },
+                { title: "MEN'S HIGH ANKLE SNEAKER" },
+                { title: "MEN'S CASUAL SHOE" },
+                { title: "MEN'S SNEAKER" },
+                { title: "MEN'S SANDAL" },
+                { title: "MEN'S FORMAL SHOE" },
+                { title: "MEN'S LOAFER" },
+              ],
+            },
+          ],
+        },
+        {
+          sections: [
+            {
+              title: "WOMEN'S FOOTWEAR",
+              items: [
+                { title: "BLOCK HEEL SLIDE SANDAL" },
+                { title: "BALLERINA SHOE" },
+                { title: "WOMENS SHOE" },
+                { title: "WOMEN'S SANDAL" },
+                { title: "WOMEN'S SNEAKER" },
+              ],
+            },
+          ],
+        },
+        {
+          sections: [
+            {
+              title: "BOY'S FOOTWEAR",
+              items: [{ title: "BOY'S SNEAKER" }],
+            },
+            {
+              title: "GIRL'S FOOTWEAR",
+              items: [{ title: "GIRL'S SNEAKER" }],
+            },
+          ],
+        },
+        {
+          sections: [
+            {
+              title: "NEWBORN GIRL'S BOTTOM",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 8,
+      title: "ACCESSORIES",
+      link: "/accessories",
+      dropdownClass: "-left-85",
+      images: {
+        left: accDpImgOne,
+        rightImages: [accDpImgTow, accDpImgTheree],
+      },
+      gridCols: 4,
+      columns: [
+        {
+          sections: [
+            {
+              title: "MEN'sS BAG",
+              items: [{ title: "POUCH BAG" }, { title: "MEN'S LEPTOP BAG" }],
+            },
+          ],
+        },
+        {
+          sections: [
+            {
+              title: "WOMEN'S BAG",
+              items: [
+                { title: "PARTY BAG" },
+                { title: "SHOLDER BAG" },
+                { title: "HAND BAG" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ];
   return (
-    <div className="hidden lg:block ">
-      <div className=" py-2 ">
+    <div className="hidden lg:block">
+      <div className="py-2">
         <div className="flex items-center justify-center gap-6">
-          {/* summer collectoion dropdowen start */}
-          {/* summer collectoion dropdowen start */}
-          <div className="relative group">
-            {/* Trigger */}
-            <Link href="/summer-collection">
-              <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer uppercase">
-                Summer Collection/25
-              </h3>
-            </Link>
-
-            {/* Dropdown */}
-            <div
-              className={`absolute left-108 transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2 rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
-        duration-300 flex flex-col items-start 
-        opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
-            >
-              <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
-                {/* Left image */}
-                <div className="w-full md:w-1/4 shrink-0">
-                  <div className="relative w-2/3 h-[300px] lg:h-[400px]">
-                    <Image
-                      src={summweDpimgOne}
-                      alt="Left"
-                      layout="fill"
-                      objectFit="cover"
-                      priority
-                    />
-                  </div>
-                </div>
-
-                {/* Grid content */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
-                  <div>
-                    <Link href="/summer-collection/men-summer-comfort">
-                      <li
-                        className=" list-none font-semibold mb-2 text-left cursor-pointer uppercase 
-                     hover:text-red-600 hover:translate-x-1 transition-transform duration-200"
-                      >
-                        Men Summer Comfort
-                      </li>
-                    </Link>
-                  </div>
-                  <div>
-                    <Link href="/summer-collection/women-summer-comfort">
-                      <li
-                        className=" list-none mb-2 font-semibold text-left cursor-pointer uppercase 
-                     hover:text-red-600 hover:translate-x-1 transition-transform duration-200"
-                      >
-                        Women Summer Comfort
-                      </li>
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Right images */}
-                <div className="w-full md:w-1/4 flex gap-3 shrink-0">
-                  <div className="relative w-1/2 h-[200px] lg:h-[300px]">
-                    <Image
-                      src={summweDpimgTwo}
-                      alt="Right 1"
-                      layout="fill"
-                      objectFit="cover"
-                      priority
-                    />
-                  </div>
-                  <div className="relative w-1/2 h-[200px] lg:h-[300px]">
-                    <Image
-                      src={summweDpimgTheree}
-                      alt="Right 2"
-                      layout="fill"
-                      objectFit="cover"
-                      priority
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* summer collection dropdowen end */}
-
-          {/* new araivle   dropdowen start */}
-          <div className="relative group text-center cursor-pointer transition-all duration-200 border-orange-400 hover:border-[#91d36b] text-white">
-            {/* Trigger */}
-            <div className="relative group">
-              <Link href="/new-arrivle">
-                <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer">
-                  NEW ARRIVAL/25
+          {navigationData.map((navItem) => (
+            <div key={navItem.id} className="relative group">
+              {/* Trigger */}
+              <Link href={navItem.link}>
+                <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer uppercase">
+                  {navItem.title}
                 </h3>
               </Link>
 
               {/* Dropdown */}
               <div
-                className={`absolute left-58 transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2 rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
-          duration-300 flex flex-col items-start 
-          opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
+                className={`absolute ${navItem.dropdownClass} transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2 rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg duration-300 flex flex-col items-start opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
               >
                 <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
-                  {/* Left image */}
+                  {/* Left Image */}
                   <div className="w-full md:w-1/4 shrink-0">
                     <div className="relative w-2/3 h-[300px] lg:h-[400px]">
                       <Image
-                        src={newAraivleDpImgOne}
+                        src={navItem.images.left}
                         alt="Left"
                         layout="fill"
                         objectFit="cover"
@@ -143,828 +605,104 @@ const BottomNav = () => {
                     </div>
                   </div>
 
-                  {/* Grid content */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full md:w-2/4 text-gray-700">
-                    <div>
-                      <h4 className="mb-2 font-semibold text-left">MEN</h4>
-                      <h4 className="mb-2 font-semibold text-left">
-                        <Link href="/new-arrivle/panjabi">PANJABI</Link>
-                      </h4>
-                      <ul className="space-y-1">
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/new-arrivle/panjabi/classic">
-                            CLASSIC
-                          </Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/new-arrivle/panjabi/fusion">FUSION</Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/new-arrivle/panjabi/kabli-suit">
-                            KABLI SUIT
-                          </Link>
-                        </li>
-                      </ul>
-                      <Link href="/new-arrivle/panjabi/shirt">
-                        <h4 className="my-2 font-semibold text-left">SHIRT</h4>
-                      </Link>
+                  {/* Grid Content */}
+                  <div
+                    className={`grid grid-cols-2 ${
+                      navItem.gridCols === 4
+                        ? "md:grid-cols-4"
+                        : "md:grid-cols-3"
+                    } gap-6 w-full md:w-2/4 text-[14px] text-gray-700`}
+                  >
+                    {navItem.columns.map((column, colIndex) => (
+                      <div key={colIndex}>
+                        {/* Category Heading (যেমন: MEN, WOMEN) */}
+                        {column.category && (
+                          <h4 className="mb-2 font-semibold text-left">
+                            {column.category}
+                          </h4>
+                        )}
 
-                      <ul className="space-y-1">
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/new-arrivle/shirt/business-formal-shirt">
-                            BUSINESS FORMAL SHIRT
-                          </Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/new-arrivle/shirt/executive-formal-shirt">
-                            EXECUTIVE FORMAL SHIRT
-                          </Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/new-arrivle/shirt/fashion-express-shirt">
-                            FASHION EXPRESS SHIRT
-                          </Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/new-arrivle/shirt/knit-dress-shirt">
-                            KNIT DRESS SHIRT
-                          </Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/men/shirt/smart-casual-shirt">
-                            SMART CASUAL SHIRT
-                          </Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/men/shirt/casual-shirt">
-                            CASUAL SHIRT
-                          </Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/men/shirt/casual-shirt-hs">
-                            CASUAL SHIRT (H/S)
-                          </Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/men/shirt/knit-casual-shirt-hs">
-                            KNIT CASUAL SHIRT (H/S)
-                          </Link>
-                        </li>
-                      </ul>
+                        {/* Sections (যেমন: SHIRT, PANJABI, POLOS) */}
+                        {column.sections &&
+                          column.sections.map((section, secIndex) => (
+                            <div key={secIndex}>
+                              {/* Section Title */}
+                              {section.title && (
+                                <h4 className="my-2 font-semibold text-left">
+                                  {section.link ? (
+                                    <Link href={section.link}>
+                                      {section.title}
+                                    </Link>
+                                  ) : (
+                                    section.title
+                                  )}
+                                </h4>
+                              )}
 
-                      <h4 className="mb-2 font-semibold text-left">POLOS</h4>
-                      <ul className="space-y-1">
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/men/polos/knit-basic-polo">
-                            KNIT BASIC POLO
-                          </Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/men/polos/knit-fashion-polo">
-                            KNIT FASHION POLO
-                          </Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/men/polos/kabli-suit">KABLI SUIT</Link>
-                        </li>
-                      </ul>
-                    </div>
+                              {/* Section Items */}
+                              {section.items && section.items.length > 0 && (
+                                <ul className="space-y-1">
+                                  {section.items.map((item, itemIndex) => (
+                                    <li
+                                      key={itemIndex}
+                                      className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200"
+                                    >
+                                      {item.link ? (
+                                        <Link href={item.link}>
+                                          {item.title}
+                                        </Link>
+                                      ) : (
+                                        item.title
+                                      )}
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                          ))}
 
-                    <div>
-                      <h4 className="mb-2 font-semibold text-left">WOMEN</h4>
-                      <ul className="space-y-1">
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/women/kurti">KURTI</Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/women/long-kurti">LONG KURTI</Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/women/salwar-suit">SALWAR SUIT</Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/women/gown">GOWN</Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/women/2-pce">2 PCE</Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/women/long-top">LONG TOP</Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/women/short-top">SHORT TOP</Link>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h4 className="mb-2 font-semibold text-left">FOOTWEAR</h4>
-                      <ul className="space-y-1">
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/footwear/casual-shoe">CASUAL SHOE</Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/footwear/fashion-loafer">
-                            FASHION LOAFER
-                          </Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/footwear/sandal">SANDAL</Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/footwear/fashion-sneaker">
-                            FASHION SNEAKER
-                          </Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/footwear/formal-shoe">FORMAL SHOE</Link>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h4 className="mb-2 font-semibold text-left">KIDS</h4>
-                      <ul className="space-y-1">
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/kids/newborn">NEWBORN</Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/kids/boys-collection">
-                            BOY'S COLLECTION
-                          </Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/kids/newborn-boys-collection">
-                            NEWBORN BOY'S COLLECTION
-                          </Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/kids/girls-collection">
-                            GIRL'S COLLECTION
-                          </Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/kids/newborn-girls-collection">
-                            NEWBORN GIRL'S COLLECTION
-                          </Link>
-                        </li>
-                        <li className="list-none mb-2 text-left cursor-pointer uppercase text-[12px] font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200">
-                          <Link href="/kids/kids">KID'S</Link>
-                        </li>
-                      </ul>
-                    </div>
+                        {/* Direct Items (Summer Collection এর জন্য) */}
+                        {column.items && column.items.length > 0 && (
+                          <ul className="space-y-1">
+                            {column.items.map((item, itemIndex) => (
+                              <li
+                                key={itemIndex}
+                                className="list-none mb-2 text-left cursor-pointer uppercase font-semibold hover:text-red-600 hover:translate-x-1 transition-transform duration-200"
+                              >
+                                {item.link ? (
+                                  <Link href={item.link}>{item.title}</Link>
+                                ) : (
+                                  item.title
+                                )}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    ))}
                   </div>
 
-                  {/* Right image */}
+                  {/* Right Images */}
                   <div className="w-full md:w-1/4 flex gap-3 shrink-0">
-                    <div className="relative w-1/2 h-[200px] lg:h-[300px]">
-                      <Image
-                        src={newAraivleDpImgTow}
-                        alt="Right 1"
-                        layout="fill"
-                        objectFit="cover"
-                        priority
-                      />
-                    </div>
-                    <div className="relative w-1/2 h-[200px] lg:h-[300px]">
-                      <Image
-                        src={newAraivleDpImgTheree}
-                        alt="Right 2"
-                        layout="fill"
-                        objectFit="cover"
-                        priority
-                      />
-                    </div>
+                    {navItem.images.rightImages.map((img, imgIndex) => (
+                      <div
+                        key={imgIndex}
+                        className="relative w-1/2 h-[200px] lg:h-[300px]"
+                      >
+                        <Image
+                          src={img}
+                          alt={`Right ${imgIndex + 1}`}
+                          layout="fill"
+                          objectFit="cover"
+                          priority
+                        />
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* new araivle   dropdowen end */}
-
-          {/* mens start dropdowen start*/}
-          <div className="relative group   text-center cursor-pointer transition-all duration-200  border-orange-400 hover:border-[#91d36b]  text-white group">
-            {/* Trigger */}
-            <div className="relative group">
-              {/* Trigger */}
-              <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer">
-                MEN'S
-              </h3>
-
-              {/* Dropdown */}
-              <div
-                className={`absolute left-22  transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2  rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
-    duration-300 flex flex-col items-start 
-    opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
-              >
-                <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
-                  {/* Left image */}
-                  <div className="w-full   md:w-1/4 shrink-0">
-                    <div className="relative w-2/3 h-[300px] lg:h-[400px]">
-                      <Image
-                        src={menDpImgOne}
-                        alt="Left"
-                        layout="fill"
-                        objectFit="cover"
-                        priority
-                      />
-                    </div>
-                  </div>
-
-                  {/* Grid content */}
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
-                    <div>
-                      <h4 className=" mb-2 text-left">ACTIVE WEAR</h4>
-                      {/* shirts */}
-                      <h4 className=" my-2 text-left">SHIRT</h4>
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">
-                          BUSINESS FORMAL SHIRT
-                        </li>
-                        <li className="text-left text-[12px]">
-                          EXECUTIVE FORMAL SHIRT
-                        </li>
-                        <li className="text-left text-[12px]">
-                          FASHION EXPRESS SHIRT
-                        </li>
-                        <li className="text-left text-[12px]">
-                          KNIT DRESS SHIRT
-                        </li>
-                        <li className="text-left text-[12px]">
-                          SMART CASUAL SHIRT
-                        </li>
-                        <li className="text-left text-[12px]">CASUAL SHIRT</li>
-                        <li className="text-left text-[12px]">
-                          CASUAL SHIRT (H/S)
-                        </li>
-                        <li className="text-left text-[12px]">
-                          KNIT CASUAL SHIRT (H/S)
-                        </li>
-                      </ul>
-                      {/* panjabi */}
-                      <h4 className=" my-2 text-left">PANJABI</h4>
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">CLASSIC</li>
-                        <li className="text-left text-[12px]">FUSION</li>
-                        <li className="text-left text-[12px]">KABLI SUIT</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className=" mb-2 text-left">FASTIVE SPORT LIGHT</h4>
-                      {/* polos */}
-                      <h4 className=" mb-2 text-left">POLOS</h4>
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">
-                          KNIT BASIC POLO
-                        </li>
-                        <li className="text-left text-[12px]">
-                          KNIT FASHION POLO
-                        </li>
-
-                        <li className="text-left text-[12px]">KABLI SUIT</li>
-                      </ul>
-                      {/* t-SHIRTS */}
-                      <h4 className=" my-2 text-left">T-SHIRTS</h4>
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">
-                          SPORT T-SHIRTS
-                        </li>
-                        <li className="text-left text-[12px]">
-                          REGLURE T-SHIRTS
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className=" mb-2 text-left">BOOTOM</h4>
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">CHINO TROUSER</li>
-                        <li className="text-left text-[12px]">DENIM TROUSER</li>
-                        <li className="text-left text-[12px]">SANDAL</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  {/* Right image */}
-                  <div className="w-full md:w-1/4 flex gap-3 shrink-0">
-                    <div className="relative w-1/2 h-[200px] lg:h-[300px]">
-                      <Image
-                        src={menDpImgTwo}
-                        alt="Right 1"
-                        layout="fill"
-                        objectFit="cover"
-                        priority
-                      />
-                    </div>
-                    <div className="relative w-1/2 h-[200px]  lg:h-[300px]">
-                      <Image
-                        src={menDpImgTheree}
-                        alt="Right 2"
-                        layout="fill"
-                        objectFit="cover"
-                        priority
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* mens dropdowen end */}
-
-          {/* women start dropdowen start*/}
-          <div className="relative group   text-center cursor-pointer transition-all duration-200  border-orange-400 hover:border-[#91d36b]  text-white group">
-            {/* Trigger */}
-            <div className="relative group">
-              {/* Trigger */}
-              <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer">
-                WOMEN'S
-              </h3>
-
-              {/* Dropdown */}
-              <div
-                className={`absolute left-5  transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2  rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
-    duration-300 flex flex-col items-start 
-    opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
-              >
-                <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
-                  {/* Left image */}
-                  <div className="w-full   md:w-1/4 shrink-0">
-                    <div className="relative w-2/3 h-[300px] lg:h-[400px]">
-                      <Image
-                        src={womenDpImgOne}
-                        alt="Left"
-                        layout="fill"
-                        objectFit="cover"
-                        priority
-                      />
-                    </div>
-                  </div>
-
-                  {/* Grid content */}
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
-                    <div>
-                      <h4 className=" mb-2 text-left">TOP</h4>
-                      {/* shirts */}
-                      <h4 className=" my-2 text-left">SHIRT</h4>
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">CROP TOP</li>
-                        <li className="text-left text-[12px]">SHORT TOP</li>
-                        <li className="text-left text-[12px]">LONG TOP</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className=" mb-2 text-left">KAFTAN</h4>
-                      {/* polos */}
-                      <h4 className=" mb-2 text-left">2 PEC</h4>
-                      <h4 className=" mb-2 text-left">SHIRT</h4>
-                      <h4 className=" mb-2 text-left">SALOWER SUIT</h4>
-                    </div>
-                    <div>
-                      <h4 className=" mb-2 text-left">BOOTOM</h4>
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">SKIRT</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  {/* Right image */}
-                  <div className="w-full md:w-1/4 flex gap-3 shrink-0">
-                    <div className="relative w-1/2 h-[200px] lg:h-[300px]">
-                      <Image
-                        src={womenDpImgTwo}
-                        alt="Right 1"
-                        layout="fill"
-                        objectFit="cover"
-                        priority
-                      />
-                    </div>
-                    <div className="relative w-1/2 h-[200px]  lg:h-[300px]">
-                      <Image
-                        src={womenDpImgTheree}
-                        alt="Right 2"
-                        layout="fill"
-                        objectFit="cover"
-                        priority
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* women dropdowen end */}
-
-          {/* kids start dropdowen start*/}
-          <div className="relative group   text-center cursor-pointer transition-all duration-200  border-orange-400 hover:border-[#91d36b]  text-white group">
-            {/* Trigger */}
-            <div className="relative group">
-              {/* Trigger */}
-              <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer">
-                KID'S
-              </h3>
-
-              {/* Dropdown */}
-              <div
-                className={`absolute -left-19  transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2  rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
-    duration-300 flex flex-col items-start 
-    opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
-              >
-                <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
-                  {/* Left image */}
-                  <div className="w-full   md:w-1/4 shrink-0">
-                    <div className="relative w-2/3 h-[300px] lg:h-[400px]">
-                      <Image
-                        src={kisDpImgOne}
-                        alt="Left"
-                        layout="fill"
-                        objectFit="cover"
-                        priority
-                      />
-                    </div>
-                  </div>
-
-                  {/* Grid content */}
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
-                    <div>
-                      <h4 className=" mb-2 text-left">BOY'S SET</h4>
-                      {/* BOY'S set */}
-
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">
-                          BOY'S PREMIUM PANJABI SET
-                        </li>
-                        <li className="text-left text-[12px]">
-                          BOY'S KABLI SUIT
-                        </li>
-                      </ul>
-                      <h4 className=" mb-2 text-left">BOY'S TOP</h4>
-                      {/* BOY'S TOP */}
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">BOY'S PANJABI</li>
-                        <li className="text-left text-[12px]">
-                          BOY'S TWIN TOP
-                        </li>
-                        <li className="text-left text-[12px]">
-                          BOY'S CASUAL SHIRT
-                        </li>
-                        <li className="text-left text-[12px]">BOY'S T-SHIRT</li>
-                        <li className="text-left text-[12px]">BOY'S HENLEY</li>
-                        <li className="text-left text-[12px]">BOY'S POLO</li>
-                      </ul>
-                    </div>
-                    <div></div>
-                    <div>
-                      {/* girls sets */}
-                      <h4 className=" mb-2 text-left">GIRL'S SET</h4>
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">
-                          GIRL'S TOP WITH SKIRT
-                        </li>
-                        <li className="text-left text-[12px]">
-                          GIRL'S TOP BOTTOM
-                        </li>
-                        <li className="text-left text-[12px]">
-                          GIRL'S SALWAR SUIT
-                        </li>
-                        <li className="text-left text-[12px]">GIRL'S 2 PCS</li>
-                      </ul>
-                      {/* girls tops */}
-                      <h4 className=" mb-2 text-left">GIRL'S SET</h4>
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">
-                          GIRL'S T-SHIRT
-                        </li>
-                        <li className="text-left text-[12px]">
-                          GIRL'S PARTY DRESS
-                        </li>
-                        <li className="text-left text-[12px]">GIRL'S KURTI</li>
-                        <li className="text-left text-[12px]">GIRL'S TOPS</li>
-                        <li className="text-left text-[12px]">GIRL'S FROCK</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  {/* Right image */}
-                  <div className="w-full md:w-1/4 flex gap-3 shrink-0">
-                    <div className="relative w-1/2 h-[200px] lg:h-[300px]">
-                      <Image
-                        src={kidDpImgTwo}
-                        alt="Right 1"
-                        layout="fill"
-                        objectFit="cover"
-                        priority
-                      />
-                    </div>
-                    <div className="relative w-1/2 h-[200px]  lg:h-[300px]">
-                      <Image
-                        src={kidDpImgTheree}
-                        alt="Right 2"
-                        layout="fill"
-                        objectFit="cover"
-                        priority
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* kids dropdowen end */}
-
-          {/* newborn dropwen start */}
-          <div className="relative group   text-center cursor-pointer transition-all duration-200  border-orange-400 hover:border-[#91d36b]  text-white group">
-            {/* Trigger */}
-            <div className="relative group">
-              {/* Trigger */}
-              <h3 className="text-[15px] font-semibold text-gray-700 cursor-pointer">
-                NEWBRON
-              </h3>
-
-              {/* Dropdown */}
-              <div
-                className={`absolute -left-35  transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2  rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
-    duration-300 flex flex-col items-start 
-    opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
-              >
-                <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
-                  {/* Left image */}
-                  <div className="w-full md:w-1/4 shrink-0">
-                    <div className="relative w-2/3 h-[300px] lg:h-[400px]">
-                      <Image
-                        src={newbronDpImgOne}
-                        alt="Left"
-                        layout="fill"
-                        objectFit="cover"
-                        priority
-                      />
-                    </div>
-                  </div>
-
-                  {/* Grid content */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
-                    <div>
-                      <h4 className=" mb-2 text-left">NEWBORN BOY'S TOP</h4>
-                      {/* NEWBORN BOY'S TOP */}
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">
-                          NB BOY'S CASUAL SHIRT
-                        </li>
-                        <li className="text-left text-[12px]">NB BOY'S NIMA</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className=" mb-2 text-left">NEWBORN BOY'S BOTTOM</h4>
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">
-                          NB BOY'S SHORT PANT
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className=" mb-2 text-left">NEWBORN GIRL'S SET</h4>
-                      {/* NEWBORN GIRL'S SET */}
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">
-                          NB GIRLS SALWAR SUIT
-                        </li>
-                        <li className="text-left text-[12px]">
-                          NB GIRLS TOP BOTTOM
-                        </li>
-                      </ul>
-                      <h4 className=" mb-2 text-left">NEWBORN GIRL'S TOP</h4>
-                      {/* NEWBORN GIRL'S TOP */}
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">
-                          NB GIRLS FROCK
-                        </li>
-                        <li className="text-left text-[12px]">
-                          NB GIRLS PARTY DRESS
-                        </li>
-                        <li className="text-left text-[12px]">NB GIRLS NIMA</li>
-                        <li className="text-left text-[12px]">
-                          NB GIRLS T-SHIRT
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className=" mb-2 text-left">NEWBORN GIRL'S BOTTOM</h4>
-                    </div>
-                  </div>
-
-                  {/* Right image */}
-                  <div className="w-full md:w-1/4 flex gap-3 shrink-0">
-                    <div className="relative w-1/2 h-[200px] lg:h-[300px]">
-                      <Image
-                        src={newbronDpImgTwo}
-                        alt="Right 1"
-                        layout="fill"
-                        objectFit="cover"
-                        priority
-                      />
-                    </div>
-                    <div className="relative w-1/2 h-[200px] lg:h-[300px]">
-                      <Image
-                        src={newbronDpImgTheree}
-                        alt="Right 2"
-                        layout="fill"
-                        objectFit="cover"
-                        priority
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* newborn dropwen end */}
-
-          {/* footware start */}
-          <div className="relative group   text-center cursor-pointer transition-all duration-200  border-orange-400 hover:border-[#91d36b]  text-white group">
-            {/* Trigger */}
-            <div className="relative group">
-              {/* Trigger */}
-              <h3 className="text-[15px] font-semibold  text-gray-700 cursor-pointer">
-                FOOTWEAR
-              </h3>
-
-              {/* Dropdown */}
-              <div
-                className={`absolute -left-59 transform -translate-x-1/2 z-[1000] px-[10px] w-[99vw] top-full py-2 rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
-    duration-300 flex flex-col items-start 
-    opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
-              >
-                <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
-                  {/* Left image */}
-                  <div className="w-full md:w-1/4 shrink-0">
-                    <div className="relative w-2/3 h-[300px] lg:h-[400px]">
-                      <Image
-                        src={footwareDpImgOne}
-                        alt="Left"
-                        layout="fill"
-                        objectFit="cover"
-                        priority
-                      />
-                    </div>
-                  </div>
-
-                  {/* Grid content */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
-                    <div>
-                      <h4 className=" mb-2 text-left">MEN'S FOOTWEAR</h4>
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">
-                          MEN'S HIGH ANKLE BOOT
-                        </li>
-                        <li className="text-left text-[12px]">
-                          MEN'S HIGH ANKLE SNEAKER
-                        </li>
-                        <li className="text-left text-[12px]">
-                          MEN'S CASUAL SHOE
-                        </li>
-                        <li className="text-left text-[12px]">MEN'S SNEAKER</li>
-                        <li className="text-left text-[12px]">MEN'S SANDAL</li>
-                        <li className="text-left text-[12px]">
-                          MEN'S FORMAL SHOE
-                        </li>
-                        <li className="text-left text-[12px]">MEN'S LOAFER</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className=" mb-2 text-left">WOMEN'S FOOTWEAR</h4>
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">
-                          BLOCK HEEL SLIDE SANDAL
-                        </li>
-                        <li className="text-left text-[12px]">
-                          BALLERINA SHOE
-                        </li>
-                        <li className="text-left text-[12px]">WOMENS SHOE</li>
-                        <li className="text-left text-[12px]">
-                          WOMEN'S SANDAL
-                        </li>
-                        <li className="text-left text-[12px]">
-                          WOMEN'S SNEAKER
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className=" mb-2 text-left">BOY'S FOOTWEAR</h4>
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">BOY'S SNEAKER</li>
-                      </ul>
-                      <h4 className=" mb-2 text-left">GIRL'S FOOTWEAR</h4>
-                      <ul className="space-y-1">
-                        <li className="text-left text-[12px]">
-                          GIRL'S SNEAKER
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className=" mb-2 text-left">NEWBORN GIRL'S BOTTOM</h4>
-                    </div>
-                  </div>
-
-                  {/* Right image */}
-                  <div className="w-full md:w-1/4 flex gap-3 shrink-0">
-                    <div className="relative w-1/2 h-[200px] lg:h-[300px]">
-                      <Image
-                        src={footwareDpImgTwo}
-                        alt="Right 1"
-                        layout="fill"
-                        objectFit="cover"
-                        priority
-                      />
-                    </div>
-                    <div className="relative w-1/2 h-[200px] lg:h-[300px]">
-                      <Image
-                        src={footwareDpImgTheree}
-                        alt="Right 2"
-                        layout="fill"
-                        objectFit="cover"
-                        priority
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* footware start */}
-
-          {/* ACCESSORIES start */}
-          <div className="relative group">
-            {/* Trigger */}
-            <h3 className="text-[15px] font-semibold  text-gray-700 cursor-pointer">
-              ACCESSORIES
-            </h3>
-            {/* Dropdown */}
-
-            <div
-              className={`absolute -left-85 transform -translate-x-1/2 z-[1000] px-[10px]  w-[99vw] top-full py-2 rounded-sm mt-[7px] bg-white text-gray-400 shadow-lg
-    duration-300 flex flex-col items-start 
-    opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all`}
-            >
-              <div className="mx-auto w-full px-2 flex flex-col md:flex-row justify-between gap-6 items-start">
-                {/* Left image */}
-                <div className="w-full md:w-1/4 shrink-0">
-                  <div className="relative w-2/3 h-[300px] lg:h-[400px]">
-                    <Image
-                      src={accDpImgOne}
-                      alt="Left"
-                      layout="fill"
-                      objectFit="cover"
-                      priority
-                    />
-                  </div>
-                </div>
-
-                {/* Grid content */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full md:w-2/4 text-[14px] text-gray-700">
-                  <div>
-                    <h4 className=" mb-2 text-left">MEN'sS BAG</h4>
-                    <ul className="space-y-1">
-                      <li className="text-left text-[12px]">POUCH BAG</li>
-                      <li className="text-left text-[12px]">
-                        MEN'S LEPTOP BAG
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className=" mb-2 text-left">WOMEN'S BAG</h4>
-                    <ul className="space-y-1">
-                      <li className="text-left text-[12px]">PARTY BAG</li>
-                      <li className="text-left text-[12px]">SHOLDER BAG</li>
-                      <li className="text-left text-[12px]">HAND BAG</li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Right images */}
-                <div className="w-full md:w-1/4 flex gap-3 shrink-0">
-                  <div className="relative w-1/2 h-[200px] lg:h-[300px]">
-                    <Image
-                      src={accDpImgTow}
-                      alt="Right 1"
-                      layout="fill"
-                      objectFit="cover"
-                      priority
-                    />
-                  </div>
-                  <div className="relative w-1/2 h-[200px] lg:h-[300px]">
-                    <Image
-                      src={accDpImgTheree}
-                      alt="Right 2"
-                      layout="fill"
-                      objectFit="cover"
-                      priority
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/*ACCESSORIES end */}
+          ))}
         </div>
       </div>
     </div>
